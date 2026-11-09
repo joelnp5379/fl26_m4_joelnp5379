@@ -8,6 +8,7 @@
 
 #include "aiws/processing_core.hpp"
 #include "aiws/workspace.hpp"
+#include "aiws/ipc_server.hpp"
 
 class QLabel;
 class QPushButton;
@@ -153,6 +154,7 @@ private:
     int build_delay_ms_{0};
     std::atomic<int> workspace_version_{0};
     std::atomic<bool> cancel_build_{false};
+    //std::unique_ptr<IpcServer> ipc_server_;
 };
 
 }  // namespace aiws::gui

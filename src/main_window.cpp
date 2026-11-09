@@ -3,6 +3,8 @@
 #include "aiws/gui/search_widget.hpp"
 #include "aiws/gui/term_inspector_widget.hpp"
 #include "aiws/gui/context_widget.hpp"
+#include "aiws/ipc_server.hpp"
+#include <unistd.h>
 
 #include <QFileDialog>
 #include <QFile>
@@ -78,6 +80,7 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent) {
 
     resize(900, 900);
     reset_application();
+
 }
 
 void MainWindow::set_exit_callback(ExitCallback callback) noexcept {
@@ -258,6 +261,8 @@ bool MainWindow::add_document_file(const QString& path) {
 }
 
 MainWindow::~MainWindow() {
+    //if (ipc_server_) ipc_server_->stop();
+
     cancel_build_ = true; // Signal any active background work to stop
     if (build_thread_.joinable()) {
         build_thread_.join();
