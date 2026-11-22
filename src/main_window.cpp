@@ -95,36 +95,38 @@ void MainWindow::add_document() {
 }
 //Build corpus implementation bridge between GUI and ProcessingCore
 void MainWindow::build_corpus() {
+    if (building_) return;
+    if (build_thread_.joinable()) build_thread_.join();
+
+    building_ = true;
+    cancel_build_ = false;
     status_label_->setText("Current status: Building corpus in background...");
-    
-    int captured_version = workspace_version_.load();
-    
+    update_action_states();
+
+    const int captured_version = workspace_version_.load();
     Workspace workspace_copy = workspace_;
-    int delay_per_doc = build_delay_ms_;
-    
-    if (build_thread_.joinable()) {
-        build_thread_.join();
-    }
-    
+    const int delay_per_doc = build_delay_ms_;
+
     build_thread_ = std::thread([this, workspace_copy, captured_version, delay_per_doc]() {
         try {
-            // Build the corpus locally inside the thread
             auto local_core = std::make_shared<ProcessingCore>();
             local_core->rebuild(workspace_copy);
-            
-            // Simulate the slow build required by M4 (N ms per document)
-            if (delay_per_doc > 0) {
-                std::this_thread::sleep_for(
-                    std::chrono::milliseconds(delay_per_doc * workspace_copy.documents().size())
-                );
+
+            // Simulated slow build
+            long long remaining_ms =
+                static_cast<long long>(delay_per_doc) * workspace_copy.documents().size();
+            while (remaining_ms > 0) {
+                if (cancel_build_.load()) return;       // window closing
+                std::this_thread::sleep_for(std::chrono::milliseconds(10));
+                remaining_ms -= 10;
             }
-            
+            if (cancel_build_.load()) return;
+
             QMetaObject::invokeMethod(this, [this, local_core, captured_version]() {
                 handle_build_finished(local_core, captured_version);
             }, Qt::QueuedConnection);
-            
         } catch (const std::exception& e) {
-            // Send failure back to GUI thread
+            if (cancel_build_.load()) return;
             QString error_msg = QString::fromStdString(e.what());
             QMetaObject::invokeMethod(this, [this, error_msg]() {
                 handle_build_failed(error_msg);
@@ -194,6 +196,7 @@ void MainWindow::term_inspection_requested(const QString& term, const QString& c
 }
 //Reset application implementation
 void MainWindow::reset_application() {
+    workspace_version_++;
     workspace_.clear();
     corpus_current_ = false;
     
@@ -213,8 +216,8 @@ void MainWindow::exit_application() {
 }
 //Update action states implementation turn the UI buttons on or off based on current state
 void MainWindow::update_action_states() {
-    workspace_widget_->set_build_corpus_enabled(!workspace_.documents().empty());
-    
+    workspace_widget_->set_build_corpus_enabled(!workspace_.documents().empty() && !building_);
+
     bool can_search = corpus_current_ && search_widget_->has_query();
     search_widget_->set_search_enabled(can_search);
     context_widget_->set_build_context_enabled(can_search);
@@ -270,13 +273,14 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::handle_build_finished(std::shared_ptr<ProcessingCore> new_core, int completed_version) {
+    building_ = false;
 #ifndef AIWS_FAULT_ACCEPT_STALE
     if (completed_version != workspace_version_.load()) {
         status_label_->setText("Current status: Build finished, but workspace changed. Corpus discarded.");
+        update_action_states();            // re-enables Build Corpus
         return;
     }
 #endif
-
     processing_core_ = std::move(*new_core);
     corpus_current_ = true;
     workspace_widget_->set_corpus_status(QString("Corpus: %1 chunks").arg(processing_core_.chunk_count()));
@@ -287,9 +291,12 @@ void MainWindow::handle_build_finished(std::shared_ptr<ProcessingCore> new_core,
 
 void MainWindow::handle_build_failed(const QString& error_message) {
 #ifndef AIWS_FAULT_LOSE_FAILURE
+    building_ = false;
     status_label_->setText(QString("Current status: Rebuild failed - %1").arg(error_message));
     corpus_current_ = false;
     update_action_states();
+#else
+    (void)error_message;
 #endif
 }
 

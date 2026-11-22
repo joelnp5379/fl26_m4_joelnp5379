@@ -1,0 +1,2 @@
+/usr/bin/ar qc libaiws_app.a CMakeFiles/aiws_app.dir/aiws_app_autogen/mocs_compilation.cpp.o CMakeFiles/aiws_app.dir/src/main_window.cpp.o CMakeFiles/aiws_app.dir/src/workspace_widget.cpp.o CMakeFiles/aiws_app.dir/src/search_widget.cpp.o CMakeFiles/aiws_app.dir/src/context_widget.cpp.o CMakeFiles/aiws_app.dir/src/term_inspector_widget.cpp.o CMakeFiles/aiws_app.dir/src/search_result_model.cpp.o CMakeFiles/aiws_app.dir/src/ipc_server.cpp.o
+/usr/bin/ranlib libaiws_app.a

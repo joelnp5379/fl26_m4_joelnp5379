@@ -152,6 +152,7 @@ private:
 
     std::thread build_thread_;
     int build_delay_ms_{0};
+    bool building_{false};
     std::atomic<int> workspace_version_{0};
     std::atomic<bool> cancel_build_{false};
     //std::unique_ptr<IpcServer> ipc_server_;
