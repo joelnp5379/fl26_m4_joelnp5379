@@ -485,20 +485,17 @@ CMakeFiles/student_tests.dir/tests/student_tests.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtemporarydir.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTemporaryFile \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtemporaryfile.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QTextStream \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qtextstream.h \
- /mnt/include/aiws/gui/main_window.hpp \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
  /usr/include/c++/13/thread /usr/include/c++/13/bits/this_thread_sleep.h \
- /mnt/include/aiws/processing_core.hpp \
+ /mnt/include/aiws/build_worker.hpp /mnt/include/aiws/processing_core.hpp \
  /mnt/include/aiws/chunking_strategy.hpp /mnt/include/aiws/document.hpp \
  /mnt/include/aiws/processing_types.hpp \
  /mnt/include/aiws/context_strategy.hpp \
  /mnt/include/aiws/retrieval_strategy.hpp \
  /mnt/include/aiws/corpus_index.hpp /mnt/include/aiws/workspace.hpp \
- /mnt/include/aiws/ipc_server.hpp /mnt/include/aiws/gui/search_widget.hpp \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
- /mnt/include/aiws/gui/resettable.hpp \
+ /mnt/include/aiws/gui/main_window.hpp \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /mnt/include/aiws/gui/corpus_state.hpp /mnt/include/aiws/ipc_server.hpp \
  /mnt/build_f2/student_tests_autogen/include/student_tests.moc

@@ -1,12 +1,12 @@
 /mnt/build_f2/student_tests_autogen/include/student_tests.moc: /mnt/tests/student_tests.cpp \
   /mnt/build_f2/student_tests_autogen/moc_predefs.h \
+  /mnt/include/aiws/build_worker.hpp \
   /mnt/include/aiws/chunking_strategy.hpp \
   /mnt/include/aiws/context_strategy.hpp \
   /mnt/include/aiws/corpus_index.hpp \
   /mnt/include/aiws/document.hpp \
+  /mnt/include/aiws/gui/corpus_state.hpp \
   /mnt/include/aiws/gui/main_window.hpp \
-  /mnt/include/aiws/gui/resettable.hpp \
-  /mnt/include/aiws/gui/search_widget.hpp \
   /mnt/include/aiws/ipc_server.hpp \
   /mnt/include/aiws/processing_core.hpp \
   /mnt/include/aiws/processing_types.hpp \
@@ -139,6 +139,7 @@
   /usr/include/c++/13/codecvt \
   /usr/include/c++/13/compare \
   /usr/include/c++/13/concepts \
+  /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
@@ -169,6 +170,7 @@
   /usr/include/c++/13/locale \
   /usr/include/c++/13/map \
   /usr/include/c++/13/memory \
+  /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
   /usr/include/c++/13/numbers \
   /usr/include/c++/13/numeric \
@@ -330,9 +332,9 @@
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTemporaryDir \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTemporaryFile \
-  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTextStream \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q23functional.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
@@ -518,7 +520,6 @@
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSizePolicy \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h \

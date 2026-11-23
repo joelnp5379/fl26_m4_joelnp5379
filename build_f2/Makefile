@@ -153,17 +153,17 @@ aiws_app/fast:
 .PHONY : aiws_app/fast
 
 #=============================================================================
-# Target rules for targets named ai_workspace_m4
+# Target rules for targets named ai_workspace_m5
 
 # Build rule for target.
-ai_workspace_m4: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ai_workspace_m4
-.PHONY : ai_workspace_m4
+ai_workspace_m5: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ai_workspace_m5
+.PHONY : ai_workspace_m5
 
 # fast build rule for target.
-ai_workspace_m4/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m4.dir/build.make CMakeFiles/ai_workspace_m4.dir/build
-.PHONY : ai_workspace_m4/fast
+ai_workspace_m5/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m5.dir/build.make CMakeFiles/ai_workspace_m5.dir/build
+.PHONY : ai_workspace_m5/fast
 
 #=============================================================================
 # Target rules for targets named student_tests
@@ -244,30 +244,30 @@ aiws_app_autogen/fast:
 .PHONY : aiws_app_autogen/fast
 
 #=============================================================================
-# Target rules for targets named ai_workspace_m4_autogen_timestamp_deps
+# Target rules for targets named ai_workspace_m5_autogen_timestamp_deps
 
 # Build rule for target.
-ai_workspace_m4_autogen_timestamp_deps: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ai_workspace_m4_autogen_timestamp_deps
-.PHONY : ai_workspace_m4_autogen_timestamp_deps
+ai_workspace_m5_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ai_workspace_m5_autogen_timestamp_deps
+.PHONY : ai_workspace_m5_autogen_timestamp_deps
 
 # fast build rule for target.
-ai_workspace_m4_autogen_timestamp_deps/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m4_autogen_timestamp_deps.dir/build.make CMakeFiles/ai_workspace_m4_autogen_timestamp_deps.dir/build
-.PHONY : ai_workspace_m4_autogen_timestamp_deps/fast
+ai_workspace_m5_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m5_autogen_timestamp_deps.dir/build.make CMakeFiles/ai_workspace_m5_autogen_timestamp_deps.dir/build
+.PHONY : ai_workspace_m5_autogen_timestamp_deps/fast
 
 #=============================================================================
-# Target rules for targets named ai_workspace_m4_autogen
+# Target rules for targets named ai_workspace_m5_autogen
 
 # Build rule for target.
-ai_workspace_m4_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ai_workspace_m4_autogen
-.PHONY : ai_workspace_m4_autogen
+ai_workspace_m5_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ai_workspace_m5_autogen
+.PHONY : ai_workspace_m5_autogen
 
 # fast build rule for target.
-ai_workspace_m4_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m4_autogen.dir/build.make CMakeFiles/ai_workspace_m4_autogen.dir/build
-.PHONY : ai_workspace_m4_autogen/fast
+ai_workspace_m5_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m5_autogen.dir/build.make CMakeFiles/ai_workspace_m5_autogen.dir/build
+.PHONY : ai_workspace_m5_autogen/fast
 
 #=============================================================================
 # Target rules for targets named student_tests_autogen_timestamp_deps
@@ -321,29 +321,29 @@ aiws_send_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aiws_send_autogen.dir/build.make CMakeFiles/aiws_send_autogen.dir/build
 .PHONY : aiws_send_autogen/fast
 
-ai_workspace_m4_autogen/mocs_compilation.o: ai_workspace_m4_autogen/mocs_compilation.cpp.o
-.PHONY : ai_workspace_m4_autogen/mocs_compilation.o
+ai_workspace_m5_autogen/mocs_compilation.o: ai_workspace_m5_autogen/mocs_compilation.cpp.o
+.PHONY : ai_workspace_m5_autogen/mocs_compilation.o
 
 # target to build an object file
-ai_workspace_m4_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m4.dir/build.make CMakeFiles/ai_workspace_m4.dir/ai_workspace_m4_autogen/mocs_compilation.cpp.o
-.PHONY : ai_workspace_m4_autogen/mocs_compilation.cpp.o
+ai_workspace_m5_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m5.dir/build.make CMakeFiles/ai_workspace_m5.dir/ai_workspace_m5_autogen/mocs_compilation.cpp.o
+.PHONY : ai_workspace_m5_autogen/mocs_compilation.cpp.o
 
-ai_workspace_m4_autogen/mocs_compilation.i: ai_workspace_m4_autogen/mocs_compilation.cpp.i
-.PHONY : ai_workspace_m4_autogen/mocs_compilation.i
+ai_workspace_m5_autogen/mocs_compilation.i: ai_workspace_m5_autogen/mocs_compilation.cpp.i
+.PHONY : ai_workspace_m5_autogen/mocs_compilation.i
 
 # target to preprocess a source file
-ai_workspace_m4_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m4.dir/build.make CMakeFiles/ai_workspace_m4.dir/ai_workspace_m4_autogen/mocs_compilation.cpp.i
-.PHONY : ai_workspace_m4_autogen/mocs_compilation.cpp.i
+ai_workspace_m5_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m5.dir/build.make CMakeFiles/ai_workspace_m5.dir/ai_workspace_m5_autogen/mocs_compilation.cpp.i
+.PHONY : ai_workspace_m5_autogen/mocs_compilation.cpp.i
 
-ai_workspace_m4_autogen/mocs_compilation.s: ai_workspace_m4_autogen/mocs_compilation.cpp.s
-.PHONY : ai_workspace_m4_autogen/mocs_compilation.s
+ai_workspace_m5_autogen/mocs_compilation.s: ai_workspace_m5_autogen/mocs_compilation.cpp.s
+.PHONY : ai_workspace_m5_autogen/mocs_compilation.s
 
 # target to generate assembly for a file
-ai_workspace_m4_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m4.dir/build.make CMakeFiles/ai_workspace_m4.dir/ai_workspace_m4_autogen/mocs_compilation.cpp.s
-.PHONY : ai_workspace_m4_autogen/mocs_compilation.cpp.s
+ai_workspace_m5_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m5.dir/build.make CMakeFiles/ai_workspace_m5.dir/ai_workspace_m5_autogen/mocs_compilation.cpp.s
+.PHONY : ai_workspace_m5_autogen/mocs_compilation.cpp.s
 
 aiws_app_autogen/mocs_compilation.o: aiws_app_autogen/mocs_compilation.cpp.o
 .PHONY : aiws_app_autogen/mocs_compilation.o
@@ -416,6 +416,30 @@ aiws_send_autogen/mocs_compilation.s: aiws_send_autogen/mocs_compilation.cpp.s
 aiws_send_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aiws_send.dir/build.make CMakeFiles/aiws_send.dir/aiws_send_autogen/mocs_compilation.cpp.s
 .PHONY : aiws_send_autogen/mocs_compilation.cpp.s
+
+src/build_worker.o: src/build_worker.cpp.o
+.PHONY : src/build_worker.o
+
+# target to build an object file
+src/build_worker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aiws_app.dir/build.make CMakeFiles/aiws_app.dir/src/build_worker.cpp.o
+.PHONY : src/build_worker.cpp.o
+
+src/build_worker.i: src/build_worker.cpp.i
+.PHONY : src/build_worker.i
+
+# target to preprocess a source file
+src/build_worker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aiws_app.dir/build.make CMakeFiles/aiws_app.dir/src/build_worker.cpp.i
+.PHONY : src/build_worker.cpp.i
+
+src/build_worker.s: src/build_worker.cpp.s
+.PHONY : src/build_worker.s
+
+# target to generate assembly for a file
+src/build_worker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aiws_app.dir/build.make CMakeFiles/aiws_app.dir/src/build_worker.cpp.s
+.PHONY : src/build_worker.cpp.s
 
 src/chunker.o: src/chunker.cpp.o
 .PHONY : src/chunker.o
@@ -513,6 +537,30 @@ src/corpus_index.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aiws_m2.dir/build.make CMakeFiles/aiws_m2.dir/src/corpus_index.cpp.s
 .PHONY : src/corpus_index.cpp.s
 
+src/corpus_state.o: src/corpus_state.cpp.o
+.PHONY : src/corpus_state.o
+
+# target to build an object file
+src/corpus_state.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aiws_app.dir/build.make CMakeFiles/aiws_app.dir/src/corpus_state.cpp.o
+.PHONY : src/corpus_state.cpp.o
+
+src/corpus_state.i: src/corpus_state.cpp.i
+.PHONY : src/corpus_state.i
+
+# target to preprocess a source file
+src/corpus_state.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aiws_app.dir/build.make CMakeFiles/aiws_app.dir/src/corpus_state.cpp.i
+.PHONY : src/corpus_state.cpp.i
+
+src/corpus_state.s: src/corpus_state.cpp.s
+.PHONY : src/corpus_state.s
+
+# target to generate assembly for a file
+src/corpus_state.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aiws_app.dir/build.make CMakeFiles/aiws_app.dir/src/corpus_state.cpp.s
+.PHONY : src/corpus_state.cpp.s
+
 src/document.o: src/document.cpp.o
 .PHONY : src/document.o
 
@@ -566,7 +614,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m4.dir/build.make CMakeFiles/ai_workspace_m4.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m5.dir/build.make CMakeFiles/ai_workspace_m5.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -574,7 +622,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m4.dir/build.make CMakeFiles/ai_workspace_m4.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m5.dir/build.make CMakeFiles/ai_workspace_m5.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -582,7 +630,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m4.dir/build.make CMakeFiles/ai_workspace_m4.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai_workspace_m5.dir/build.make CMakeFiles/ai_workspace_m5.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/main_window.o: src/main_window.cpp.o
@@ -882,8 +930,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... ai_workspace_m4_autogen"
-	@echo "... ai_workspace_m4_autogen_timestamp_deps"
+	@echo "... ai_workspace_m5_autogen"
+	@echo "... ai_workspace_m5_autogen_timestamp_deps"
 	@echo "... aiws_app_autogen"
 	@echo "... aiws_app_autogen_timestamp_deps"
 	@echo "... aiws_m2_autogen"
@@ -892,14 +940,14 @@ help:
 	@echo "... aiws_send_autogen_timestamp_deps"
 	@echo "... student_tests_autogen"
 	@echo "... student_tests_autogen_timestamp_deps"
-	@echo "... ai_workspace_m4"
+	@echo "... ai_workspace_m5"
 	@echo "... aiws_app"
 	@echo "... aiws_m2"
 	@echo "... aiws_send"
 	@echo "... student_tests"
-	@echo "... ai_workspace_m4_autogen/mocs_compilation.o"
-	@echo "... ai_workspace_m4_autogen/mocs_compilation.i"
-	@echo "... ai_workspace_m4_autogen/mocs_compilation.s"
+	@echo "... ai_workspace_m5_autogen/mocs_compilation.o"
+	@echo "... ai_workspace_m5_autogen/mocs_compilation.i"
+	@echo "... ai_workspace_m5_autogen/mocs_compilation.s"
 	@echo "... aiws_app_autogen/mocs_compilation.o"
 	@echo "... aiws_app_autogen/mocs_compilation.i"
 	@echo "... aiws_app_autogen/mocs_compilation.s"
@@ -909,6 +957,9 @@ help:
 	@echo "... aiws_send_autogen/mocs_compilation.o"
 	@echo "... aiws_send_autogen/mocs_compilation.i"
 	@echo "... aiws_send_autogen/mocs_compilation.s"
+	@echo "... src/build_worker.o"
+	@echo "... src/build_worker.i"
+	@echo "... src/build_worker.s"
 	@echo "... src/chunker.o"
 	@echo "... src/chunker.i"
 	@echo "... src/chunker.s"
@@ -921,6 +972,9 @@ help:
 	@echo "... src/corpus_index.o"
 	@echo "... src/corpus_index.i"
 	@echo "... src/corpus_index.s"
+	@echo "... src/corpus_state.o"
+	@echo "... src/corpus_state.i"
+	@echo "... src/corpus_state.s"
 	@echo "... src/document.o"
 	@echo "... src/document.i"
 	@echo "... src/document.s"

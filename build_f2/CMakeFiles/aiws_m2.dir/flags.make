@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/mnt/build_f2/aiws_m2_autogen/include -I/mnt/include
 
-CXX_FLAGS = -DAIWS_FAULT_LOSE_FAILURE -std=c++17 -Wall -Wextra -Wpedantic
+CXX_FLAGS = -DAIWS_FAULT_SILENT_SHUTDOWN -std=c++17 -Wall -Wextra -Wpedantic
 

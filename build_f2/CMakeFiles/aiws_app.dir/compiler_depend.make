@@ -5,11 +5,13 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
   CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
   CMakeFiles/3.28.3/CMakeSystem.cmake \
   aiws_app_autogen/moc_predefs.h \
+  /mnt/include/aiws/build_worker.hpp \
   /mnt/include/aiws/chunking_strategy.hpp \
   /mnt/include/aiws/context_strategy.hpp \
   /mnt/include/aiws/corpus_index.hpp \
   /mnt/include/aiws/document.hpp \
   /mnt/include/aiws/gui/context_widget.hpp \
+  /mnt/include/aiws/gui/corpus_state.hpp \
   /mnt/include/aiws/gui/main_window.hpp \
   /mnt/include/aiws/gui/resettable.hpp \
   /mnt/include/aiws/gui/search_result_model.hpp \
@@ -21,7 +23,9 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
   /mnt/include/aiws/processing_types.hpp \
   /mnt/include/aiws/retrieval_strategy.hpp \
   /mnt/include/aiws/workspace.hpp \
+  /mnt/src/build_worker.cpp \
   /mnt/src/context_widget.cpp \
+  /mnt/src/corpus_state.cpp \
   /mnt/src/ipc_server.cpp \
   /mnt/src/main_window.cpp \
   /mnt/src/search_result_model.cpp \
@@ -145,6 +149,7 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/compare \
   /usr/include/c++/13/concepts \
+  /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
@@ -170,6 +175,7 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/memory \
+  /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
   /usr/include/c++/13/numbers \
   /usr/include/c++/13/numeric \
@@ -739,11 +745,17 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/share/cmake-3.28/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake:
 
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake:
 
-/usr/include/x86_64-linux-gnu/bits/timex.h:
+/usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp:
 
-/usr/include/time.h:
+/usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-none.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
@@ -771,14 +783,6 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/include/c++/13/tr1/riemann_zeta.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayalgorithms.h:
 
 /usr/include/string.h:
@@ -794,8 +798,6 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
 /usr/include/linux/limits.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
-
-/usr/include/c++/13/unordered_map:
 
 /usr/include/stdc-predef.h:
 
@@ -849,6 +851,10 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qnumeric.h:
 
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h:
+
 /usr/include/c++/13/ext/alloc_traits.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake:
@@ -893,10 +899,6 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/include/c++/13/new:
 
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
 /usr/include/c++/13/bits/utility.h:
 
 /usr/include/locale.h:
@@ -912,10 +914,6 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
 /usr/include/sched.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypeinfo.h:
-
-/usr/include/c++/13/bits/allocator.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets-none.cmake:
 
 /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake:
 
@@ -967,6 +965,10 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qsystemdetection.h:
 
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/usr/include/c++/13/bits/stl_vector.h:
+
 /usr/include/c++/13/bits/char_traits.h:
 
 /usr/include/c++/13/bits/std_function.h:
@@ -981,8 +983,6 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /mnt/include/aiws/gui/context_widget.hpp:
 
-/mnt/include/aiws/workspace.hpp:
-
 /mnt/CMakeLists.txt:
 
 /usr/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake:
@@ -991,9 +991,7 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/include/c++/13/bits/unique_ptr.h:
 
-/usr/include/c++/13/backward/binders.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFindPackageHelpers.cmake:
+/mnt/include/aiws/gui/corpus_state.hpp:
 
 /usr/include/c++/13/backward/auto_ptr.h:
 
@@ -1009,9 +1007,47 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/include/c++/13/bits/hash_bytes.h:
 
+/usr/include/c++/13/bits/alloc_traits.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/usr/include/c++/13/bits/stringfwd.h:
+
+/usr/include/c++/13/cerrno:
+
+/mnt/src/workspace_widget.cpp:
+
+/usr/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qforeach.h:
+
+/mnt/include/aiws/gui/resettable.hpp:
+
+/usr/include/c++/13/backward/binders.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFindPackageHelpers.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+
+/usr/bin/cmake:
+
+/usr/include/strings.h:
+
+/usr/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake:
+
+/usr/include/c++/13/bits/stream_iterator.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/c++/13/atomic:
+
+/usr/include/c++/13/tr1/special_function_util.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h:
+
+/usr/include/c++/13/tr1/poly_laguerre.tcc:
 
 /usr/include/c++/13/bits/streambuf.tcc:
 
@@ -1029,55 +1065,17 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/include/c++/13/cstdint:
 
-/mnt/include/aiws/gui/resettable.hpp:
+/usr/include/c++/13/unordered_map:
 
-/usr/include/c++/13/typeinfo:
+/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets-none.cmake:
 
-/usr/include/c++/13/cctype:
+/usr/include/c++/13/bits/allocator.h:
 
-/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake:
+/mnt/include/aiws/workspace.hpp:
 
-/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake:
+/mnt/include/aiws/build_worker.hpp:
 
-/usr/include/c++/13/streambuf:
-
-/usr/include/c++/13/pstl/glue_memory_defs.h:
-
-/usr/include/c++/13/bits/memory_resource.h:
-
-/usr/include/c++/13/bits/exception.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QAbstractTableModel:
-
-/mnt/include/aiws/gui/search_widget.hpp:
-
-/usr/include/c++/13/cstddef:
-
-/usr/include/c++/13/bits/stl_algo.h:
-
-/usr/include/c++/13/bits/alloc_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
-
-/usr/include/c++/13/bits/stringfwd.h:
-
-/usr/include/c++/13/cerrno:
-
-/mnt/src/workspace_widget.cpp:
-
-/usr/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qforeach.h:
-
-/mnt/include/aiws/context_strategy.hpp:
-
-/usr/include/c++/13/bits/c++0x_warning.h:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+/mnt/src/corpus_state.cpp:
 
 /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake:
 
@@ -1089,9 +1087,27 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /mnt/include/aiws/chunking_strategy.hpp:
 
-/mnt/include/aiws/ipc_server.hpp:
+/usr/include/c++/13/chrono:
 
-/mnt/src/search_result_model.cpp:
+/usr/include/c++/13/utility:
+
+/mnt/src/context_widget.cpp:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QAbstractTableModel:
+
+/mnt/include/aiws/gui/search_widget.hpp:
+
+/usr/include/c++/13/cstddef:
+
+/usr/include/c++/13/bits/stl_algo.h:
+
+/mnt/include/aiws/context_strategy.hpp:
+
+/usr/include/c++/13/bits/c++0x_warning.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/mnt/include/aiws/ipc_server.hpp:
 
 /usr/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake:
 
@@ -1099,13 +1115,13 @@ aiws_app_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersion.cmake:
 
-/usr/include/c++/13/chrono:
-
-/usr/include/c++/13/utility:
-
-/mnt/src/context_widget.cpp:
+/mnt/src/search_result_model.cpp:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake:
+
+/usr/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake:
+
+/usr/include/c++/13/bits/refwrap.h:
 
 /usr/include/c++/13/stdexcept:
 
@@ -1135,17 +1151,11 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /usr/include/c++/13/bits/stl_raw_storage_iter.h:
 
-/usr/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake:
+/mnt/src/build_worker.cpp:
 
-/usr/include/c++/13/bits/stream_iterator.h:
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
-
-/usr/include/c++/13/tr1/special_function_util.h:
-
-/usr/include/c++/13/tr1/poly_laguerre.tcc:
-
-/usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h:
+/usr/include/c++/13/bits/exception_ptr.h:
 
 /usr/include/stdio.h:
 
@@ -1156,6 +1166,32 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 /usr/include/c++/13/bits/mofunc_impl.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigExtras.cmake:
+
+/usr/include/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/c++/13/typeinfo:
+
+/usr/include/c++/13/cctype:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake:
+
+/usr/include/c++/13/streambuf:
+
+/usr/include/c++/13/pstl/glue_memory_defs.h:
+
+/usr/include/c++/13/bits/memory_resource.h:
+
+/usr/include/c++/13/bits/exception.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake:
+
+/usr/include/c++/13/condition_variable:
 
 /usr/include/c++/13/bits/ranges_cmp.h:
 
@@ -1169,12 +1205,6 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h:
 
-/usr/include/strings.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
-
-/usr/bin/cmake:
-
 /usr/include/c++/13/bits/stl_multimap.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
@@ -1183,9 +1213,15 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow:
 
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/usr/include/c++/13/bits/exception_ptr.h:
+/mnt/include/aiws/processing_types.hpp:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake:
+
+/mnt/src/ipc_server.cpp:
+
+/usr/include/c++/13/bits/functexcept.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
@@ -1271,10 +1307,6 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /usr/include/c++/13/bits/ranges_algobase.h:
 
-/usr/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake:
-
-/usr/include/c++/13/bits/refwrap.h:
-
 /usr/include/c++/13/bits/locale_facets.tcc:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusTargets-none.cmake:
@@ -1309,16 +1341,6 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h:
 
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/mnt/include/aiws/processing_types.hpp:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake:
-
-/mnt/src/ipc_server.cpp:
-
-/usr/include/c++/13/bits/functexcept.h:
-
 /usr/include/c++/13/bits/stl_heap.h:
 
 /usr/include/c++/13/bits/atomic_lockfree_defines.h:
@@ -1337,9 +1359,9 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
 aiws_app_autogen/moc_predefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
 /usr/include/c++/13/bits/stl_map.h:
 
@@ -1353,9 +1375,19 @@ aiws_app_autogen/moc_predefs.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake:
 
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
 
-/usr/include/c++/13/bits/stl_vector.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfig.cmake:
 
@@ -1416,8 +1448,6 @@ aiws_app_autogen/moc_predefs.h:
 /usr/include/c++/13/bits/align.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h:
-
-/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake:
 
 /usr/include/c++/13/tr1/poly_hermite.tcc:
 
@@ -1597,6 +1627,8 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h:
 
+/usr/include/c++/13/mutex:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qsize.h:
 
 /usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:
@@ -1606,10 +1638,6 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qcursor.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgb.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h:
 
@@ -1708,8 +1736,6 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /usr/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-none.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h:
 
@@ -1849,9 +1875,9 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestAdditionalTargetInfo.cmake:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
 /usr/include/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfigVersion.cmake:
 
@@ -1860,8 +1886,6 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestTargets-none.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestVersionlessTargets.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake:
 
 /usr/include/ctype.h:
 
@@ -1886,9 +1910,3 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake:
-
-/usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in:
-
-/usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp:

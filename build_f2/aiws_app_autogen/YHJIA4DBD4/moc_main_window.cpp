@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_aiws__gui__MainWindow_t {
-    uint offsetsAndSizes[50];
+    uint offsetsAndSizes[52];
     char stringdata0[22];
     char stringdata1[13];
     char stringdata2[1];
@@ -47,11 +47,12 @@ struct qt_meta_stringdata_aiws__gui__MainWindow_t {
     char stringdata17[18];
     char stringdata18[17];
     char stringdata19[22];
-    char stringdata20[32];
-    char stringdata21[9];
-    char stringdata22[18];
-    char stringdata23[20];
-    char stringdata24[14];
+    char stringdata20[14];
+    char stringdata21[11];
+    char stringdata22[32];
+    char stringdata23[5];
+    char stringdata24[20];
+    char stringdata25[14];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_aiws__gui__MainWindow_t::offsetsAndSizes) + ofs), len 
@@ -77,11 +78,12 @@ Q_CONSTINIT static const qt_meta_stringdata_aiws__gui__MainWindow_t qt_meta_stri
         QT_MOC_LITERAL(225, 17),  // "reset_application"
         QT_MOC_LITERAL(243, 16),  // "exit_application"
         QT_MOC_LITERAL(260, 21),  // "handle_build_finished"
-        QT_MOC_LITERAL(282, 31),  // "std::shared_ptr<ProcessingCore>"
-        QT_MOC_LITERAL(314, 8),  // "new_core"
-        QT_MOC_LITERAL(323, 17),  // "completed_version"
-        QT_MOC_LITERAL(341, 19),  // "handle_build_failed"
-        QT_MOC_LITERAL(361, 13)   // "error_message"
+        QT_MOC_LITERAL(282, 13),  // "std::uint64_t"
+        QT_MOC_LITERAL(296, 10),  // "generation"
+        QT_MOC_LITERAL(307, 31),  // "std::shared_ptr<ProcessingCore>"
+        QT_MOC_LITERAL(339, 4),  // "core"
+        QT_MOC_LITERAL(344, 19),  // "handle_build_failed"
+        QT_MOC_LITERAL(364, 13)   // "error_message"
     },
     "aiws::gui::MainWindow",
     "add_document",
@@ -103,9 +105,10 @@ Q_CONSTINIT static const qt_meta_stringdata_aiws__gui__MainWindow_t qt_meta_stri
     "reset_application",
     "exit_application",
     "handle_build_finished",
+    "std::uint64_t",
+    "generation",
     "std::shared_ptr<ProcessingCore>",
-    "new_core",
-    "completed_version",
+    "core",
     "handle_build_failed",
     "error_message"
 };
@@ -137,7 +140,7 @@ Q_CONSTINIT static const uint qt_meta_data_aiws__gui__MainWindow[] = {
       17,    0,  110,    2, 0x08,   17 /* Private */,
       18,    0,  111,    2, 0x08,   18 /* Private */,
       19,    2,  112,    2, 0x08,   19 /* Private */,
-      23,    1,  117,    2, 0x08,   22 /* Private */,
+      24,    2,  117,    2, 0x08,   22 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -150,8 +153,8 @@ Q_CONSTINIT static const uint qt_meta_data_aiws__gui__MainWindow[] = {
     QMetaType::Void, QMetaType::QString, QMetaType::QString,   15,   16,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 20, QMetaType::Int,   21,   22,
-    QMetaType::Void, QMetaType::QString,   24,
+    QMetaType::Void, 0x80000000 | 20, 0x80000000 | 22,   21,   23,
+    QMetaType::Void, 0x80000000 | 20, QMetaType::QString,   21,   25,
 
        0        // eod
 };
@@ -195,10 +198,11 @@ Q_CONSTINIT const QMetaObject aiws::gui::MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'handle_build_finished'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<std::uint64_t, std::false_type>,
         QtPrivate::TypeAndForceComplete<std::shared_ptr<ProcessingCore>, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'handle_build_failed'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<std::uint64_t, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
     >,
     nullptr
@@ -220,8 +224,8 @@ void aiws::gui::MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c
         case 7: _t->term_inspection_requested((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         case 8: _t->reset_application(); break;
         case 9: _t->exit_application(); break;
-        case 10: _t->handle_build_finished((*reinterpret_cast< std::add_pointer_t<std::shared_ptr<ProcessingCore>>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
-        case 11: _t->handle_build_failed((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 10: _t->handle_build_finished((*reinterpret_cast< std::add_pointer_t<std::uint64_t>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<std::shared_ptr<ProcessingCore>>>(_a[2]))); break;
+        case 11: _t->handle_build_failed((*reinterpret_cast< std::add_pointer_t<std::uint64_t>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         default: ;
         }
     }

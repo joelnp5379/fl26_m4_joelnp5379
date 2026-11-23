@@ -1,33 +1,23 @@
-Start testing: Nov 22 17:41 UTC
+Start testing: Nov 23 18:03 UTC
 ----------------------------------------------------------
 1/1 Testing: student_tests
 1/1 Test: student_tests
 Command: "/mnt/build_f2/student_tests"
 Directory: /mnt/build_f2
-"student_tests" start time: Nov 22 17:41 UTC
+"student_tests" start time: Nov 23 18:03 UTC
 Output:
 ----------------------------------------------------------
 ********* Start testing of StudentTests *********
 Config: Using QtTest library 6.4.2, Qt 6.4.2 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 13.2.0), ubuntu 24.04
 PASS   : StudentTests::initTestCase()
-PASS   : StudentTests::test_r1_gui_not_blocked()
-PASS   : StudentTests::test_r2_stale_corpus_rejection()
-PASS   : StudentTests::test_r2_reset_during_build()
-FAIL!  : StudentTests::test_r3_failure_reporting() 'status->text().contains("failed")' returned FALSE. ()
-   Loc: [/mnt/tests/student_tests.cpp(150)]
-PASS   : StudentTests::test_r4_exit_during_build()
-PASS   : StudentTests::test_cr1_remote_add_success()
-PASS   : StudentTests::test_cr1_remote_add_invalid_file()
-PASS   : StudentTests::test_cr1_remote_add_unreachable()
-PASS   : StudentTests::cleanupTestCase()
-Totals: 9 passed, 1 failed, 0 skipped, 0 blacklisted, 16856ms
-********* Finished testing of StudentTests *********
+WARNING: StudentTests::test_r4_idle_shutdown_joins() BuildWorker did not stop at shutdown: exit would hang
+   Loc: [/mnt/tests/student_tests.cpp(149)]
 <end of output>
-Test time =  16.88 sec
+Test time =   3.04 sec
 ----------------------------------------------------------
 Test Failed.
-"student_tests" end time: Nov 22 17:41 UTC
-"student_tests" time elapsed: 00:00:16
+"student_tests" end time: Nov 23 18:03 UTC
+"student_tests" time elapsed: 00:00:03
 ----------------------------------------------------------
 
-End testing: Nov 22 17:41 UTC
+End testing: Nov 23 18:03 UTC
