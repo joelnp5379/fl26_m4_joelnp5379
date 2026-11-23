@@ -1,0 +1,2 @@
+/usr/bin/ar qc libaiws_m2.a CMakeFiles/aiws_m2.dir/aiws_m2_autogen/mocs_compilation.cpp.o CMakeFiles/aiws_m2.dir/src/document.cpp.o CMakeFiles/aiws_m2.dir/src/workspace.cpp.o CMakeFiles/aiws_m2.dir/src/text_processor.cpp.o CMakeFiles/aiws_m2.dir/src/chunker.cpp.o CMakeFiles/aiws_m2.dir/src/corpus_index.cpp.o CMakeFiles/aiws_m2.dir/src/retrieval_engine.cpp.o CMakeFiles/aiws_m2.dir/src/context_builder.cpp.o CMakeFiles/aiws_m2.dir/src/processing_core.cpp.o
+/usr/bin/ranlib libaiws_m2.a
