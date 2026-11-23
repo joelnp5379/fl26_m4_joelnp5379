@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(ai_workspace_m4 LANGUAGES CXX)
+project(ai_workspace_m5 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -8,9 +8,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 find_package(Threads REQUIRED)
 find_package(Qt6 REQUIRED COMPONENTS Widgets Test)
 set(CMAKE_AUTOMOC ON)
-
-# M4 starts from your own M3 project: copy your M3 src/ files here first.
-# Add your new M4 source files to the target where they belong.
 
 add_library(aiws_m2
     src/document.cpp
@@ -35,6 +32,10 @@ add_library(aiws_app STATIC
     src/term_inspector_widget.cpp
     src/search_result_model.cpp
     src/ipc_server.cpp
+    src/build_worker.cpp
+    src/corpus_state.cpp
+    include/aiws/build_worker.hpp
+    include/aiws/gui/corpus_state.hpp
     include/aiws/gui/main_window.hpp
     include/aiws/gui/resettable.hpp
     include/aiws/gui/workspace_widget.hpp
@@ -48,17 +49,17 @@ target_include_directories(aiws_app PUBLIC include)
 target_link_libraries(aiws_app PUBLIC aiws_m2 Qt6::Widgets)
 target_compile_options(aiws_app PRIVATE -Wall -Wextra -Wpedantic)
 
-add_executable(ai_workspace_m4 src/main.cpp)
-target_link_libraries(ai_workspace_m4 PRIVATE aiws_app)
-target_compile_options(ai_workspace_m4 PRIVATE -Wall -Wextra -Wpedantic)
+add_executable(ai_workspace_m5 src/main.cpp)
+target_link_libraries(ai_workspace_m5 PRIVATE aiws_app)
+target_compile_options(ai_workspace_m5 PRIVATE -Wall -Wextra -Wpedantic)
 
 enable_testing()
 add_executable(student_tests tests/student_tests.cpp)
 target_link_libraries(student_tests PRIVATE aiws_app Qt6::Test)
 add_test(NAME student_tests COMMAND student_tests)
-set_tests_properties(student_tests PROPERTIES TIMEOUT 60 ENVIRONMENT QT_QPA_PLATFORM=offscreen)
+set_tests_properties(student_tests PROPERTIES TIMEOUT 30 ENVIRONMENT QT_QPA_PLATFORM=offscreen)
 
-# CR-1 Interprocess Communication Tool
+# CR-1 interprocess communication tool
 add_executable(aiws_send tools/aiws_send.cpp)
-target_link_libraries(aiws_send PRIVATE Qt6::Widgets) # Adjust libraries based on CR-1 if needed
+target_link_libraries(aiws_send PRIVATE Qt6::Widgets)
 target_compile_options(aiws_send PRIVATE -Wall -Wextra -Wpedantic)

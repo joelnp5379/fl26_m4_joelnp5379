@@ -309,7 +309,7 @@
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
-		"/mnt/build_f1/ai_workspace_m4_autogen/mocs_compilation.cpp",
+		"/mnt/build_f1/ai_workspace_m5_autogen/mocs_compilation.cpp",
 		"/mnt/build_f1/aiws_app_autogen/mocs_compilation.cpp",
 		"/mnt/build_f1/aiws_m2_autogen/mocs_compilation.cpp",
 		"/mnt/build_f1/student_tests_autogen/mocs_compilation.cpp"

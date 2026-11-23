@@ -67,8 +67,8 @@ include CMakeFiles/aiws_app_autogen_timestamp_deps.dir/compiler_depend.make
 include CMakeFiles/aiws_app_autogen_timestamp_deps.dir/progress.make
 
 CMakeFiles/aiws_app_autogen_timestamp_deps: libaiws_m2.a
-CMakeFiles/aiws_app_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 CMakeFiles/aiws_app_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
+CMakeFiles/aiws_app_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 
 aiws_app_autogen_timestamp_deps: CMakeFiles/aiws_app_autogen_timestamp_deps
 aiws_app_autogen_timestamp_deps: CMakeFiles/aiws_app_autogen_timestamp_deps.dir/build.make

@@ -3,11 +3,13 @@ aiws_app_autogen/timestamp: \
 	/mnt/build_f1/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
 	/mnt/build_f1/CMakeFiles/3.28.3/CMakeSystem.cmake \
 	/mnt/build_f1/aiws_app_autogen/moc_predefs.h \
+	/mnt/include/aiws/build_worker.hpp \
 	/mnt/include/aiws/chunking_strategy.hpp \
 	/mnt/include/aiws/context_strategy.hpp \
 	/mnt/include/aiws/corpus_index.hpp \
 	/mnt/include/aiws/document.hpp \
 	/mnt/include/aiws/gui/context_widget.hpp \
+	/mnt/include/aiws/gui/corpus_state.hpp \
 	/mnt/include/aiws/gui/main_window.hpp \
 	/mnt/include/aiws/gui/resettable.hpp \
 	/mnt/include/aiws/gui/search_result_model.hpp \
@@ -19,7 +21,9 @@ aiws_app_autogen/timestamp: \
 	/mnt/include/aiws/processing_types.hpp \
 	/mnt/include/aiws/retrieval_strategy.hpp \
 	/mnt/include/aiws/workspace.hpp \
+	/mnt/src/build_worker.cpp \
 	/mnt/src/context_widget.cpp \
+	/mnt/src/corpus_state.cpp \
 	/mnt/src/ipc_server.cpp \
 	/mnt/src/main_window.cpp \
 	/mnt/src/search_result_model.cpp \
@@ -142,6 +146,7 @@ aiws_app_autogen/timestamp: \
 	/usr/include/c++/13/cmath \
 	/usr/include/c++/13/compare \
 	/usr/include/c++/13/concepts \
+	/usr/include/c++/13/condition_variable \
 	/usr/include/c++/13/cstddef \
 	/usr/include/c++/13/cstdint \
 	/usr/include/c++/13/cstdlib \
@@ -167,6 +172,7 @@ aiws_app_autogen/timestamp: \
 	/usr/include/c++/13/list \
 	/usr/include/c++/13/map \
 	/usr/include/c++/13/memory \
+	/usr/include/c++/13/mutex \
 	/usr/include/c++/13/new \
 	/usr/include/c++/13/numbers \
 	/usr/include/c++/13/numeric \

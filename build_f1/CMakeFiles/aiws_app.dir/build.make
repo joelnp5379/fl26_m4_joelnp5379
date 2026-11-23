@@ -187,6 +187,34 @@ CMakeFiles/aiws_app.dir/src/ipc_server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aiws_app.dir/src/ipc_server.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/src/ipc_server.cpp -o CMakeFiles/aiws_app.dir/src/ipc_server.cpp.s
 
+CMakeFiles/aiws_app.dir/src/build_worker.cpp.o: CMakeFiles/aiws_app.dir/flags.make
+CMakeFiles/aiws_app.dir/src/build_worker.cpp.o: /mnt/src/build_worker.cpp
+CMakeFiles/aiws_app.dir/src/build_worker.cpp.o: CMakeFiles/aiws_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/build_f1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/aiws_app.dir/src/build_worker.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aiws_app.dir/src/build_worker.cpp.o -MF CMakeFiles/aiws_app.dir/src/build_worker.cpp.o.d -o CMakeFiles/aiws_app.dir/src/build_worker.cpp.o -c /mnt/src/build_worker.cpp
+
+CMakeFiles/aiws_app.dir/src/build_worker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aiws_app.dir/src/build_worker.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/src/build_worker.cpp > CMakeFiles/aiws_app.dir/src/build_worker.cpp.i
+
+CMakeFiles/aiws_app.dir/src/build_worker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aiws_app.dir/src/build_worker.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/src/build_worker.cpp -o CMakeFiles/aiws_app.dir/src/build_worker.cpp.s
+
+CMakeFiles/aiws_app.dir/src/corpus_state.cpp.o: CMakeFiles/aiws_app.dir/flags.make
+CMakeFiles/aiws_app.dir/src/corpus_state.cpp.o: /mnt/src/corpus_state.cpp
+CMakeFiles/aiws_app.dir/src/corpus_state.cpp.o: CMakeFiles/aiws_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/build_f1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/aiws_app.dir/src/corpus_state.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aiws_app.dir/src/corpus_state.cpp.o -MF CMakeFiles/aiws_app.dir/src/corpus_state.cpp.o.d -o CMakeFiles/aiws_app.dir/src/corpus_state.cpp.o -c /mnt/src/corpus_state.cpp
+
+CMakeFiles/aiws_app.dir/src/corpus_state.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/aiws_app.dir/src/corpus_state.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/src/corpus_state.cpp > CMakeFiles/aiws_app.dir/src/corpus_state.cpp.i
+
+CMakeFiles/aiws_app.dir/src/corpus_state.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/aiws_app.dir/src/corpus_state.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/src/corpus_state.cpp -o CMakeFiles/aiws_app.dir/src/corpus_state.cpp.s
+
 # Object files for target aiws_app
 aiws_app_OBJECTS = \
 "CMakeFiles/aiws_app.dir/aiws_app_autogen/mocs_compilation.cpp.o" \
@@ -196,7 +224,9 @@ aiws_app_OBJECTS = \
 "CMakeFiles/aiws_app.dir/src/context_widget.cpp.o" \
 "CMakeFiles/aiws_app.dir/src/term_inspector_widget.cpp.o" \
 "CMakeFiles/aiws_app.dir/src/search_result_model.cpp.o" \
-"CMakeFiles/aiws_app.dir/src/ipc_server.cpp.o"
+"CMakeFiles/aiws_app.dir/src/ipc_server.cpp.o" \
+"CMakeFiles/aiws_app.dir/src/build_worker.cpp.o" \
+"CMakeFiles/aiws_app.dir/src/corpus_state.cpp.o"
 
 # External object files for target aiws_app
 aiws_app_EXTERNAL_OBJECTS =
@@ -209,9 +239,11 @@ libaiws_app.a: CMakeFiles/aiws_app.dir/src/context_widget.cpp.o
 libaiws_app.a: CMakeFiles/aiws_app.dir/src/term_inspector_widget.cpp.o
 libaiws_app.a: CMakeFiles/aiws_app.dir/src/search_result_model.cpp.o
 libaiws_app.a: CMakeFiles/aiws_app.dir/src/ipc_server.cpp.o
+libaiws_app.a: CMakeFiles/aiws_app.dir/src/build_worker.cpp.o
+libaiws_app.a: CMakeFiles/aiws_app.dir/src/corpus_state.cpp.o
 libaiws_app.a: CMakeFiles/aiws_app.dir/build.make
 libaiws_app.a: CMakeFiles/aiws_app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/build_f1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libaiws_app.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/build_f1/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libaiws_app.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/aiws_app.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aiws_app.dir/link.txt --verbose=$(VERBOSE)
 

@@ -39,7 +39,7 @@ CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-13
 CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-13
 
 //Flags used by the CXX compiler during all build types.
-CMAKE_CXX_FLAGS:STRING=-DAIWS_FAULT_ACCEPT_STALE
+CMAKE_CXX_FLAGS:STRING=-DAIWS_FAULT_NO_CANCEL
 
 //Flags used by the CXX compiler during DEBUG builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g
@@ -170,7 +170,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=ai_workspace_m4
+CMAKE_PROJECT_NAME:STATIC=ai_workspace_m5
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -335,13 +335,13 @@ XKB_INCLUDE_DIR:PATH=XKB_INCLUDE_DIR-NOTFOUND
 XKB_LIBRARY:FILEPATH=XKB_LIBRARY-NOTFOUND
 
 //Value Computed by CMake
-ai_workspace_m4_BINARY_DIR:STATIC=/mnt/build_f1
+ai_workspace_m5_BINARY_DIR:STATIC=/mnt/build_f1
 
 //Value Computed by CMake
-ai_workspace_m4_IS_TOP_LEVEL:STATIC=ON
+ai_workspace_m5_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-ai_workspace_m4_SOURCE_DIR:STATIC=/mnt
+ai_workspace_m5_SOURCE_DIR:STATIC=/mnt
 
 
 ########################

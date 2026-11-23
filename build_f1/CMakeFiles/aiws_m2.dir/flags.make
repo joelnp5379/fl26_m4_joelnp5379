@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/mnt/build_f1/aiws_m2_autogen/include -I/mnt/include
 
-CXX_FLAGS = -DAIWS_FAULT_ACCEPT_STALE -std=c++17 -Wall -Wextra -Wpedantic
+CXX_FLAGS = -DAIWS_FAULT_NO_CANCEL -std=c++17 -Wall -Wextra -Wpedantic
 

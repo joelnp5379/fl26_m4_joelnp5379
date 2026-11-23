@@ -3,13 +3,13 @@
  mmc:Q_OBJECT
  mid:student_tests.moc
  mdp:/mnt/build_f1/student_tests_autogen/moc_predefs.h
+ mdp:/mnt/include/aiws/build_worker.hpp
  mdp:/mnt/include/aiws/chunking_strategy.hpp
  mdp:/mnt/include/aiws/context_strategy.hpp
  mdp:/mnt/include/aiws/corpus_index.hpp
  mdp:/mnt/include/aiws/document.hpp
+ mdp:/mnt/include/aiws/gui/corpus_state.hpp
  mdp:/mnt/include/aiws/gui/main_window.hpp
- mdp:/mnt/include/aiws/gui/resettable.hpp
- mdp:/mnt/include/aiws/gui/search_widget.hpp
  mdp:/mnt/include/aiws/ipc_server.hpp
  mdp:/mnt/include/aiws/processing_core.hpp
  mdp:/mnt/include/aiws/processing_types.hpp
@@ -143,6 +143,7 @@
  mdp:/usr/include/c++/13/codecvt
  mdp:/usr/include/c++/13/compare
  mdp:/usr/include/c++/13/concepts
+ mdp:/usr/include/c++/13/condition_variable
  mdp:/usr/include/c++/13/cstddef
  mdp:/usr/include/c++/13/cstdint
  mdp:/usr/include/c++/13/cstdlib
@@ -173,6 +174,7 @@
  mdp:/usr/include/c++/13/locale
  mdp:/usr/include/c++/13/map
  mdp:/usr/include/c++/13/memory
+ mdp:/usr/include/c++/13/mutex
  mdp:/usr/include/c++/13/new
  mdp:/usr/include/c++/13/numbers
  mdp:/usr/include/c++/13/numeric
@@ -334,9 +336,9 @@
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/QRect
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/QSize
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/QString
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/QTemporaryDir
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/QTemporaryFile
- mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/QTextStream
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/q23functional.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h
@@ -522,7 +524,6 @@
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSizePolicy
- mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h

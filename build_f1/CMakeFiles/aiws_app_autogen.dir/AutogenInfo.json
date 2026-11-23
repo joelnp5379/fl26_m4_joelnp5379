@@ -262,9 +262,21 @@
 	"HEADERS" : 
 	[
 		[
+			"/mnt/include/aiws/build_worker.hpp",
+			"Mu",
+			"DPUXYZ7F6K/moc_build_worker.cpp",
+			null
+		],
+		[
 			"/mnt/include/aiws/gui/context_widget.hpp",
 			"Mu",
 			"YHJIA4DBD4/moc_context_widget.cpp",
+			null
+		],
+		[
+			"/mnt/include/aiws/gui/corpus_state.hpp",
+			"Mu",
+			"YHJIA4DBD4/moc_corpus_state.cpp",
 			null
 		],
 		[
@@ -369,7 +381,9 @@
 	"SETTINGS_FILE" : "/mnt/build_f1/CMakeFiles/aiws_app_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/mnt/src/build_worker.cpp", "Mu", null ],
 		[ "/mnt/src/context_widget.cpp", "Mu", null ],
+		[ "/mnt/src/corpus_state.cpp", "Mu", null ],
 		[ "/mnt/src/ipc_server.cpp", "Mu", null ],
 		[ "/mnt/src/main_window.cpp", "Mu", null ],
 		[ "/mnt/src/search_result_model.cpp", "Mu", null ],

@@ -1,9 +1,11 @@
 /mnt/build_f1/aiws_app_autogen/YHJIA4DBD4/moc_main_window.cpp: /mnt/include/aiws/gui/main_window.hpp \
   /mnt/build_f1/aiws_app_autogen/moc_predefs.h \
+  /mnt/include/aiws/build_worker.hpp \
   /mnt/include/aiws/chunking_strategy.hpp \
   /mnt/include/aiws/context_strategy.hpp \
   /mnt/include/aiws/corpus_index.hpp \
   /mnt/include/aiws/document.hpp \
+  /mnt/include/aiws/gui/corpus_state.hpp \
   /mnt/include/aiws/ipc_server.hpp \
   /mnt/include/aiws/processing_core.hpp \
   /mnt/include/aiws/processing_types.hpp \
@@ -125,6 +127,7 @@
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/compare \
   /usr/include/c++/13/concepts \
+  /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
@@ -150,6 +153,7 @@
   /usr/include/c++/13/list \
   /usr/include/c++/13/map \
   /usr/include/c++/13/memory \
+  /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
   /usr/include/c++/13/numbers \
   /usr/include/c++/13/numeric \
@@ -293,6 +297,7 @@
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qanystringview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h \

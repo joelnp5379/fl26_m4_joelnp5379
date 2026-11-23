@@ -348,6 +348,12 @@ CMakeFiles/aiws_app.dir/aiws_app_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /mnt/include/aiws/build_worker.hpp \
+ /usr/include/c++/13/condition_variable \
+ /usr/include/c++/13/bits/std_mutex.h \
+ /usr/include/c++/13/bits/unique_lock.h /usr/include/c++/13/mutex \
  /usr/include/c++/13/thread /usr/include/c++/13/bits/std_thread.h \
  /usr/include/c++/13/bits/this_thread_sleep.h \
  /mnt/include/aiws/processing_core.hpp \
@@ -355,7 +361,7 @@ CMakeFiles/aiws_app.dir/aiws_app_autogen/mocs_compilation.cpp.o: \
  /mnt/include/aiws/context_strategy.hpp \
  /mnt/include/aiws/retrieval_strategy.hpp \
  /mnt/include/aiws/corpus_index.hpp /mnt/include/aiws/workspace.hpp \
- /mnt/include/aiws/ipc_server.hpp \
+ /mnt/include/aiws/gui/corpus_state.hpp /mnt/include/aiws/ipc_server.hpp \
  /mnt/build_f1/aiws_app_autogen/YHJIA4DBD4/moc_search_result_model.cpp \
  /mnt/build_f1/aiws_app_autogen/YHJIA4DBD4/../../../include/aiws/gui/search_result_model.hpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QAbstractTableModel \
@@ -364,7 +370,5 @@ CMakeFiles/aiws_app.dir/aiws_app_autogen/mocs_compilation.cpp.o: \
  /mnt/build_f1/aiws_app_autogen/YHJIA4DBD4/../../../include/aiws/gui/search_widget.hpp \
  /mnt/build_f1/aiws_app_autogen/YHJIA4DBD4/moc_term_inspector_widget.cpp \
  /mnt/build_f1/aiws_app_autogen/YHJIA4DBD4/../../../include/aiws/gui/term_inspector_widget.hpp \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
  /mnt/build_f1/aiws_app_autogen/YHJIA4DBD4/moc_workspace_widget.cpp \
  /mnt/build_f1/aiws_app_autogen/YHJIA4DBD4/../../../include/aiws/gui/workspace_widget.hpp

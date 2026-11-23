@@ -5,13 +5,13 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
   CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
   CMakeFiles/3.28.3/CMakeSystem.cmake \
   student_tests_autogen/moc_predefs.h \
+  /mnt/include/aiws/build_worker.hpp \
   /mnt/include/aiws/chunking_strategy.hpp \
   /mnt/include/aiws/context_strategy.hpp \
   /mnt/include/aiws/corpus_index.hpp \
   /mnt/include/aiws/document.hpp \
+  /mnt/include/aiws/gui/corpus_state.hpp \
   /mnt/include/aiws/gui/main_window.hpp \
-  /mnt/include/aiws/gui/resettable.hpp \
-  /mnt/include/aiws/gui/search_widget.hpp \
   /mnt/include/aiws/ipc_server.hpp \
   /mnt/include/aiws/processing_core.hpp \
   /mnt/include/aiws/processing_types.hpp \
@@ -146,6 +146,7 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
   /usr/include/c++/13/codecvt \
   /usr/include/c++/13/compare \
   /usr/include/c++/13/concepts \
+  /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdlib \
@@ -176,6 +177,7 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
   /usr/include/c++/13/locale \
   /usr/include/c++/13/map \
   /usr/include/c++/13/memory \
+  /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
   /usr/include/c++/13/numbers \
   /usr/include/c++/13/numeric \
@@ -337,9 +339,9 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTemporaryDir \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTemporaryFile \
-  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTextStream \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q23functional.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
@@ -525,7 +527,6 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSizePolicy \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h \
@@ -1002,8 +1003,6 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h:
-
 /usr/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h:
@@ -1064,8 +1063,6 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/include/linux/limits.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
-
 /usr/include/c++/13/future:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake:
@@ -1073,12 +1070,6 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
 /usr/include/c++/13/bits/atomic_wait.h:
 
 /usr/include/c++/13/vector:
-
-/usr/include/c++/13/unordered_map:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets-none.cmake:
-
-/usr/include/c++/13/bits/allocator.h:
 
 /usr/include/stdc-predef.h:
 
@@ -1178,8 +1169,6 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/include/c++/13/new:
 
-/usr/include/c++/13/bits/utility.h:
-
 /usr/include/locale.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
@@ -1274,6 +1263,22 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/include/c++/13/bits/fs_dir.h:
 
+/mnt/include/aiws/gui/corpus_state.hpp:
+
+/usr/include/c++/13/bits/unique_ptr.h:
+
+/usr/include/time.h:
+
+/usr/include/c++/13/typeinfo:
+
+/usr/include/c++/13/streambuf:
+
+/usr/include/c++/13/pstl/glue_memory_defs.h:
+
+/usr/include/c++/13/bits/memory_resource.h:
+
+/usr/include/c++/13/bits/exception.h:
+
 /usr/include/c++/13/bits/chrono.h:
 
 /usr/include/c++/13/bits/std_function.h:
@@ -1296,6 +1301,8 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h:
 
+/mnt/include/aiws/build_worker.hpp:
+
 /mnt/include/aiws/workspace.hpp:
 
 /mnt/CMakeLists.txt:
@@ -1304,36 +1311,6 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydatapointer.h:
 
-/usr/include/time.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/include/c++/13/typeinfo:
-
-/usr/include/c++/13/streambuf:
-
-/usr/include/c++/13/pstl/glue_memory_defs.h:
-
-/usr/include/c++/13/bits/memory_resource.h:
-
-/usr/include/c++/13/bits/exception.h:
-
-/mnt/include/aiws/gui/search_widget.hpp:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestTargets-none.cmake:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qstringliteral.h:
-
-/usr/include/c++/13/cstddef:
-
-/usr/include/c++/13/bits/stl_algo.h:
-
-/mnt/include/aiws/gui/resettable.hpp:
-
-/usr/include/x86_64-linux-gnu/qt6/QtGui/qevent.h:
-
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake:
 
 /usr/include/ctype.h:
@@ -1341,6 +1318,26 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
 /usr/include/c++/13/stdexcept:
 
 /usr/include/c++/13/clocale:
+
+/usr/include/c++/13/unordered_map:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets-none.cmake:
+
+/usr/include/c++/13/bits/allocator.h:
+
+/usr/include/c++/13/exception:
+
+/mnt/include/aiws/processing_core.hpp:
+
+/usr/include/c++/13/algorithm:
+
+/usr/include/c++/13/bits/stl_raw_storage_iter.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qeventloop.h:
 
 /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake:
 
@@ -1361,20 +1358,6 @@ student_tests_autogen/timestamp: /mnt/CMakeLists.txt \
 student_tests_autogen/moc_predefs.h:
 
 /usr/include/assert.h:
-
-/usr/include/c++/13/exception:
-
-/mnt/include/aiws/processing_core.hpp:
-
-/usr/include/c++/13/algorithm:
-
-/usr/include/c++/13/bits/stl_raw_storage_iter.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake:
-
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qeventloop.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtTest/QTest:
 
@@ -1440,13 +1423,21 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /usr/include/c++/13/backward/binders.h:
 
-/usr/include/c++/13/bits/unique_ptr.h:
-
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicPluginHelpers.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h:
 
 /usr/include/c++/13/bits/align.h:
+
+/usr/include/c++/13/condition_variable:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfigVersion.cmake:
+
+/usr/include/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtTest/qtestsystem.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFinalizerHelpers.cmake:
 
@@ -1457,6 +1448,10 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/bin/cmake:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/c++/13/bits/functexcept.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake:
 
@@ -1495,6 +1490,8 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 /usr/include/c++/13/bits/hash_bytes.h:
 
 /usr/include/c++/13/bits/codecvt.h:
+
+/usr/include/c++/13/bits/stl_tree.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h:
 
@@ -1586,9 +1583,13 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /usr/include/c++/13/bits/mofunc_impl.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QTextStream:
-
 /usr/include/c++/13/bits/move.h:
+
+/usr/include/c++/13/bits/utility.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/c++/13/bits/stl_function.h:
 
@@ -1660,6 +1661,10 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /usr/include/c++/13/bits/postypes.h:
 
+/usr/include/c++/13/cstddef:
+
+/usr/include/c++/13/bits/stl_algo.h:
+
 /usr/include/c++/13/bits/stl_algobase.h:
 
 /usr/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake:
@@ -1671,10 +1676,6 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 /usr/include/c++/13/bits/stl_construct.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/c++/13/bits/functexcept.h:
 
 /usr/include/c++/13/bits/atomic_lockfree_defines.h:
 
@@ -1706,6 +1707,12 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qsurfaceformat.h:
 
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
@@ -1723,14 +1730,6 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfigVersion.cmake:
-
-/usr/include/wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtTest/qtestsystem.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfig.cmake:
 
@@ -1858,10 +1857,6 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
-/usr/include/c++/13/bits/stl_tree.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget:
-
 /usr/include/c++/13/bits/ostream.tcc:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
@@ -1936,6 +1931,16 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF:
 
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QString:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qconfig.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qanystringview.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h:
+
 /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QTemporaryDir:
@@ -1943,12 +1948,6 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qguiapplication_platform.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qconfig.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qanystringview.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h:
 
@@ -2007,6 +2006,12 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /mnt/include/aiws/retrieval_strategy.hpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainerfwd.h:
+
+/usr/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainerinfo.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication_platform.h:
 
@@ -2080,6 +2085,8 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h:
 
+/usr/include/c++/13/mutex:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qsize.h:
 
 /usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:
@@ -2093,10 +2100,6 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgb.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h:
 
@@ -2132,6 +2135,10 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtTest/qtestkeyboard.h:
 
+/usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestTargets-none.cmake:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qstringliteral.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringmatcher.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringtokenizer.h:
@@ -2159,6 +2166,8 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qevent.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h:
 
@@ -2243,9 +2252,3 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h:
-
-/usr/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainerinfo.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h:

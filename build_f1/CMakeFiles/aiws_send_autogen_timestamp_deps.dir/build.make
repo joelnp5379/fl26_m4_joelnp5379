@@ -66,8 +66,8 @@ include CMakeFiles/aiws_send_autogen_timestamp_deps.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/aiws_send_autogen_timestamp_deps.dir/progress.make
 
-CMakeFiles/aiws_send_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 CMakeFiles/aiws_send_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
+CMakeFiles/aiws_send_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 
 aiws_send_autogen_timestamp_deps: CMakeFiles/aiws_send_autogen_timestamp_deps
 aiws_send_autogen_timestamp_deps: CMakeFiles/aiws_send_autogen_timestamp_deps.dir/build.make
