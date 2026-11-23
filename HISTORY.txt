@@ -1,0 +1,710 @@
+commit 8d5127f02e50fff19c54ee03300288c227b948f0
+Author: Joel Phillips <joelnp5379@vt.edu>
+Date:   2026-11-23 16:45:19 -0500
+
+    M5: DESIGN.md, VIDEO.md
+
+ DESIGN.md                                          |   50 +-
+ DESIGN_NOTE.md                                     |   34 -
+ .../aiws_app.dir/compiler_depend.internal          | 3849 ++++++++++++++++++
+ .../CMakeFiles/aiws_app.dir/compiler_depend.make   | 4199 ++++++++++++++++++++
+ .../aiws_app_autogen.dir/compiler_depend.make      | 1914 ++++++++-
+ .../aiws_m2.dir/compiler_depend.internal           | 1360 +++++++
+ .../CMakeFiles/aiws_m2.dir/compiler_depend.make    | 2239 ++++++++++-
+ .../aiws_m2_autogen.dir/compiler_depend.make       |  618 ++-
+ .../aiws_send.dir/compiler_depend.internal         |  272 ++
+ .../CMakeFiles/aiws_send.dir/compiler_depend.make  | 1194 +++++-
+ .../aiws_send_autogen.dir/compiler_depend.make     |  597 ++-
+ .../student_tests.dir/compiler_depend.internal     |  563 +++
+ .../student_tests.dir/compiler_depend.make         |  625 +++
+ .../student_tests_autogen.dir/compiler_depend.make | 2256 ++++++++++-
+ build_f2/CMakeCache.txt                            |   10 +-
+ build_f2/CMakeFiles/CMakeConfigureLog.yaml         |  134 +-
+ build_f2/CMakeFiles/CMakeRuleHashes.txt            |    6 +-
+ build_f2/CMakeFiles/Makefile.cmake                 |    8 +-
+ build_f2/CMakeFiles/Makefile2                      |  128 +-
+ build_f2/CMakeFiles/TargetDirectories.txt          |    6 +-
+ .../ai_workspace_m4.dir/DependInfo.cmake           |   25 -
+ .../mocs_compilation.cpp.o.d                       |    3 -
+ build_f2/CMakeFiles/ai_workspace_m4.dir/build.make |  139 -
+ .../ai_workspace_m4.dir/cmake_clean.cmake          |   18 -
+ .../ai_workspace_m4.dir/compiler_depend.internal   |  202 -
+ .../ai_workspace_m4.dir/compiler_depend.make       |  595 ---
+ .../ai_workspace_m4.dir/compiler_depend.ts         |    2 -
+ .../CMakeFiles/ai_workspace_m4.dir/depend.make     |    2 -
+ build_f2/CMakeFiles/ai_workspace_m4.dir/flags.make |   10 -
+ build_f2/CMakeFiles/ai_workspace_m4.dir/link.txt   |    1 -
+ .../CMakeFiles/ai_workspace_m4.dir/progress.make   |    5 -
+ .../ai_workspace_m4.dir/src/main.cpp.o.d           |  384 --
+ .../ai_workspace_m4_autogen.dir/AutogenInfo.json   |  329 --
+ .../ai_workspace_m4_autogen.dir/AutogenUsed.txt    |    1 -
+ .../ai_workspace_m4_autogen.dir/DependInfo.cmake   |   23 -
+ .../ai_workspace_m4_autogen.dir/ParseCache.txt     |    2 -
+ .../ai_workspace_m4_autogen.dir/build.make         |   93 -
+ .../ai_workspace_m4_autogen.dir/cmake_clean.cmake  |   10 -
+ .../compiler_depend.make                           |    2 -
+ .../ai_workspace_m4_autogen.dir/compiler_depend.ts |    2 -
+ .../ai_workspace_m4_autogen.dir/progress.make      |    2 -
+ .../DependInfo.cmake                               |   22 -
+ .../build.make                                     |   87 -
+ .../cmake_clean.cmake                              |    8 -
+ .../compiler_depend.make                           |    2 -
+ .../compiler_depend.ts                             |    2 -
+ .../progress.make                                  |    1 -
+ build_f2/CMakeFiles/aiws_app.dir/DependInfo.cmake  |    2 +
+ .../aiws_app_autogen/mocs_compilation.cpp.o.d      |   10 +-
+ build_f2/CMakeFiles/aiws_app.dir/build.make        |   36 +-
+ build_f2/CMakeFiles/aiws_app.dir/cmake_clean.cmake |    4 +
+ .../aiws_app.dir/compiler_depend.internal          |    6 +
+ .../CMakeFiles/aiws_app.dir/compiler_depend.make   |  258 +-
+ build_f2/CMakeFiles/aiws_app.dir/flags.make        |    2 +-
+ build_f2/CMakeFiles/aiws_app.dir/link.txt          |    2 +-
+ build_f2/CMakeFiles/aiws_app.dir/progress.make     |    2 +
+ .../aiws_app.dir/src/main_window.cpp.o.d           |   41 +-
+ .../aiws_app_autogen.dir/AutogenInfo.json          |   14 +
+ .../CMakeFiles/aiws_app_autogen.dir/ParseCache.txt |   23 +-
+ .../CMakeFiles/aiws_app_autogen.dir/progress.make  |    2 +-
+ build_f2/CMakeFiles/aiws_m2.dir/flags.make         |    2 +-
+ build_f2/CMakeFiles/aiws_m2.dir/progress.make      |   22 +-
+ .../CMakeFiles/aiws_m2_autogen.dir/progress.make   |    2 +-
+ build_f2/CMakeFiles/aiws_send.dir/flags.make       |    2 +-
+ build_f2/CMakeFiles/aiws_send.dir/link.txt         |    2 +-
+ build_f2/CMakeFiles/aiws_send.dir/progress.make    |    8 +-
+ .../aiws_send_autogen.dir/AutogenInfo.json         |    2 +-
+ .../CMakeFiles/aiws_send_autogen.dir/progress.make |    2 +-
+ build_f2/CMakeFiles/progress.marks                 |    2 +-
+ .../student_tests.dir/compiler_depend.internal     |    9 +-
+ .../student_tests.dir/compiler_depend.make         |  183 +-
+ build_f2/CMakeFiles/student_tests.dir/flags.make   |    2 +-
+ build_f2/CMakeFiles/student_tests.dir/link.txt     |    2 +-
+ .../CMakeFiles/student_tests.dir/progress.make     |    8 +-
+ .../student_tests.dir/tests/student_tests.cpp.o.d  |   17 +-
+ .../student_tests_autogen.dir/AutogenInfo.json     |    2 +-
+ .../student_tests_autogen.dir/ParseCache.txt       |    9 +-
+ .../student_tests_autogen.dir/progress.make        |    2 +-
+ build_f2/CTestTestfile.cmake                       |    2 +-
+ build_f2/Makefile                                  |  144 +-
+ build_f2/Testing/Temporary/LastTest.log            |   26 +-
+ build_f2/ai_workspace_m4                           |  Bin 689360 -> 0 bytes
+ build_f2/ai_workspace_m4_autogen/deps              |  198 -
+ build_f2/ai_workspace_m4_autogen/moc_predefs.h     |  466 ---
+ .../ai_workspace_m4_autogen/mocs_compilation.cpp   |    3 -
+ build_f2/ai_workspace_m4_autogen/timestamp         |    0
+ .../YHJIA4DBD4/moc_main_window.cpp                 |   42 +-
+ .../YHJIA4DBD4/moc_main_window.cpp.d               |    5 +
+ build_f2/aiws_app_autogen/deps                     |    6 +
+ build_f2/libaiws_app.a                             |  Bin 822162 -> 1064616 bytes
+ build_f2/student_tests                             |  Bin 805456 -> 1046200 bytes
+ build_f2/student_tests_autogen/deps                |    9 +-
+ .../include/student_tests.moc                      |  128 +-
+ .../include/student_tests.moc.d                    |    9 +-
+ data/public/AIWS_File1.txt                         |    1 +
+ data/public/AIWS_File2.txt                         |  165 +
+ data/public/AIWS_File3.txt                         | 1096 +++++
+ data/public/AIWS_File4.txt                         | 1236 ++++++
+ data/public/AIWS_File5.txt                         |  777 ++++
+ data/public/AIWS_File6.txt                         |  830 ++++
+ data/public/AIWS_File7.txt                         |  720 ++++
+ data/public/AIWS_File8.txt                         | 1448 +++++++
+ video.md                                           |    1 +
+ 103 files changed, 26352 insertions(+), 3674 deletions(-)
+
+commit e51195783990ef651e4b4c87301f5b62beb8d3dc
+Author: Joel Phillips <joelnp5379@vt.edu>
+Date:   2026-11-23 12:59:29 -0500
+
+    M5: single BuildWorker with condition variable and cancellation
+
+ .gitignore                                         |   2 +
+ CMakeLists.txt                                     |  21 +-
+ build_f1/CMakeCache.txt                            |  10 +-
+ build_f1/CMakeFiles/CMakeConfigureLog.yaml         | 134 ++---
+ build_f1/CMakeFiles/CMakeRuleHashes.txt            |   6 +-
+ build_f1/CMakeFiles/Makefile.cmake                 |   8 +-
+ build_f1/CMakeFiles/Makefile2                      | 128 ++---
+ build_f1/CMakeFiles/TargetDirectories.txt          |   6 +-
+ .../ai_workspace_m4.dir/DependInfo.cmake           |  25 -
+ .../mocs_compilation.cpp.o.d                       |   3 -
+ build_f1/CMakeFiles/ai_workspace_m4.dir/build.make | 139 -----
+ .../ai_workspace_m4.dir/cmake_clean.cmake          |  18 -
+ .../ai_workspace_m4.dir/compiler_depend.internal   | 202 -------
+ .../ai_workspace_m4.dir/compiler_depend.make       | 595 ---------------------
+ .../ai_workspace_m4.dir/compiler_depend.ts         |   2 -
+ .../CMakeFiles/ai_workspace_m4.dir/depend.make     |   2 -
+ build_f1/CMakeFiles/ai_workspace_m4.dir/flags.make |  10 -
+ build_f1/CMakeFiles/ai_workspace_m4.dir/link.txt   |   1 -
+ .../CMakeFiles/ai_workspace_m4.dir/progress.make   |   5 -
+ .../ai_workspace_m4.dir/src/main.cpp.o.d           | 384 -------------
+ .../ai_workspace_m4_autogen.dir/AutogenInfo.json   | 329 ------------
+ .../ai_workspace_m4_autogen.dir/AutogenUsed.txt    |   1 -
+ .../ai_workspace_m4_autogen.dir/DependInfo.cmake   |  23 -
+ .../ai_workspace_m4_autogen.dir/ParseCache.txt     |   2 -
+ .../ai_workspace_m4_autogen.dir/build.make         |  93 ----
+ .../ai_workspace_m4_autogen.dir/cmake_clean.cmake  |  10 -
+ .../compiler_depend.make                           |   2 -
+ .../ai_workspace_m4_autogen.dir/compiler_depend.ts |   2 -
+ .../ai_workspace_m4_autogen.dir/progress.make      |   2 -
+ .../DependInfo.cmake                               |  22 -
+ .../build.make                                     |  87 ---
+ .../cmake_clean.cmake                              |   8 -
+ .../compiler_depend.make                           |   2 -
+ .../compiler_depend.ts                             |   2 -
+ .../progress.make                                  |   1 -
+ build_f1/CMakeFiles/aiws_app.dir/DependInfo.cmake  |   2 +
+ .../aiws_app_autogen/mocs_compilation.cpp.o.d      |  10 +-
+ build_f1/CMakeFiles/aiws_app.dir/build.make        |  36 +-
+ build_f1/CMakeFiles/aiws_app.dir/cmake_clean.cmake |   4 +
+ .../aiws_app.dir/compiler_depend.internal          |   6 +
+ .../CMakeFiles/aiws_app.dir/compiler_depend.make   | 258 ++++-----
+ build_f1/CMakeFiles/aiws_app.dir/flags.make        |   2 +-
+ build_f1/CMakeFiles/aiws_app.dir/link.txt          |   2 +-
+ build_f1/CMakeFiles/aiws_app.dir/progress.make     |   2 +
+ .../aiws_app.dir/src/main_window.cpp.o.d           |  41 +-
+ .../aiws_app_autogen.dir/AutogenInfo.json          |  14 +
+ .../CMakeFiles/aiws_app_autogen.dir/ParseCache.txt |  23 +-
+ .../CMakeFiles/aiws_app_autogen.dir/progress.make  |   2 +-
+ .../aiws_app_autogen_timestamp_deps.dir/build.make |   2 +-
+ build_f1/CMakeFiles/aiws_m2.dir/flags.make         |   2 +-
+ build_f1/CMakeFiles/aiws_m2.dir/progress.make      |  22 +-
+ .../CMakeFiles/aiws_m2_autogen.dir/progress.make   |   2 +-
+ build_f1/CMakeFiles/aiws_send.dir/flags.make       |   2 +-
+ build_f1/CMakeFiles/aiws_send.dir/link.txt         |   2 +-
+ build_f1/CMakeFiles/aiws_send.dir/progress.make    |   8 +-
+ .../aiws_send_autogen.dir/AutogenInfo.json         |   2 +-
+ .../CMakeFiles/aiws_send_autogen.dir/progress.make |   2 +-
+ .../build.make                                     |   2 +-
+ build_f1/CMakeFiles/progress.marks                 |   2 +-
+ .../student_tests.dir/compiler_depend.internal     |   9 +-
+ .../student_tests.dir/compiler_depend.make         | 183 +++----
+ build_f1/CMakeFiles/student_tests.dir/flags.make   |   2 +-
+ build_f1/CMakeFiles/student_tests.dir/link.txt     |   2 +-
+ .../CMakeFiles/student_tests.dir/progress.make     |   8 +-
+ .../student_tests.dir/tests/student_tests.cpp.o.d  |  17 +-
+ .../student_tests_autogen.dir/AutogenInfo.json     |   2 +-
+ .../student_tests_autogen.dir/ParseCache.txt       |   9 +-
+ .../student_tests_autogen.dir/progress.make        |   2 +-
+ build_f1/CTestTestfile.cmake                       |   2 +-
+ build_f1/Makefile                                  | 144 +++--
+ build_f1/Testing/Temporary/LastTest.log            |  27 +-
+ build_f1/ai_workspace_m4                           | Bin 689360 -> 0 bytes
+ build_f1/ai_workspace_m4_autogen/deps              | 198 -------
+ build_f1/ai_workspace_m4_autogen/moc_predefs.h     | 466 ----------------
+ .../ai_workspace_m4_autogen/mocs_compilation.cpp   |   3 -
+ build_f1/ai_workspace_m4_autogen/timestamp         |   0
+ .../YHJIA4DBD4/moc_main_window.cpp                 |  42 +-
+ .../YHJIA4DBD4/moc_main_window.cpp.d               |   5 +
+ build_f1/aiws_app_autogen/deps                     |   6 +
+ build_f1/libaiws_app.a                             | Bin 822322 -> 1064536 bytes
+ build_f1/student_tests                             | Bin 805456 -> 1046200 bytes
+ build_f1/student_tests_autogen/deps                |   9 +-
+ .../include/student_tests.moc                      | 128 +++--
+ .../include/student_tests.moc.d                    |   9 +-
+ include/aiws/build_worker.hpp                      |  72 +++
+ include/aiws/gui/corpus_state.hpp                  |  60 +++
+ include/aiws/gui/main_window.hpp                   | 128 ++---
+ src/build_worker.cpp                               | 107 ++++
+ src/corpus_state.cpp                               | 129 +++++
+ src/main_window.cpp                                | 337 ++++++------
+ tests/student_tests.cpp                            | 323 ++++++++---
+ 91 files changed, 1613 insertions(+), 3553 deletions(-)
+
+commit 6f0ddd1882c53f65eb0af2c6abe4c9dab027ad17
+Author: Joel Phillips <joelnp5379@vt.edu>
+Date:   2026-11-22 13:50:20 -0500
+
+    Fixed M4 thread safe IPC shutdown, and R1-R4 tests
+
+ build_f1/.qt/QtDeploySupport.cmake                 |   45 +
+ build_f1/CMakeCache.txt                            | 1304 +++++++++++
+ build_f1/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake  |   85 +
+ .../3.28.3/CMakeDetermineCompilerABI_CXX.bin       |  Bin 0 -> 15992 bytes
+ build_f1/CMakeFiles/3.28.3/CMakeSystem.cmake       |   15 +
+ .../3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp    |  869 +++++++
+ build_f1/CMakeFiles/3.28.3/CompilerIdCXX/a.out     |  Bin 0 -> 16096 bytes
+ build_f1/CMakeFiles/CMakeConfigureLog.yaml         |  353 +++
+ .../CMakeFiles/CMakeDirectoryInformation.cmake     |   16 +
+ build_f1/CMakeFiles/CMakeRuleHashes.txt            |   16 +
+ build_f1/CMakeFiles/Makefile.cmake                 |  244 ++
+ build_f1/CMakeFiles/Makefile2                      |  504 ++++
+ build_f1/CMakeFiles/TargetDirectories.txt          |   18 +
+ .../ai_workspace_m4.dir/DependInfo.cmake           |   25 +
+ .../mocs_compilation.cpp.o.d                       |    3 +
+ build_f1/CMakeFiles/ai_workspace_m4.dir/build.make |  139 ++
+ .../ai_workspace_m4.dir/cmake_clean.cmake          |   18 +
+ .../ai_workspace_m4.dir/compiler_depend.internal   |  202 ++
+ .../ai_workspace_m4.dir/compiler_depend.make       |  595 +++++
+ .../ai_workspace_m4.dir/compiler_depend.ts         |    2 +
+ .../CMakeFiles/ai_workspace_m4.dir/depend.make     |    2 +
+ build_f1/CMakeFiles/ai_workspace_m4.dir/flags.make |   10 +
+ build_f1/CMakeFiles/ai_workspace_m4.dir/link.txt   |    1 +
+ .../CMakeFiles/ai_workspace_m4.dir/progress.make   |    5 +
+ .../ai_workspace_m4.dir/src/main.cpp.o.d           |  384 +++
+ .../ai_workspace_m4_autogen.dir/AutogenInfo.json   |  329 +++
+ .../ai_workspace_m4_autogen.dir/AutogenUsed.txt    |    1 +
+ .../ai_workspace_m4_autogen.dir/DependInfo.cmake   |   23 +
+ .../ai_workspace_m4_autogen.dir/ParseCache.txt     |    2 +
+ .../ai_workspace_m4_autogen.dir/build.make         |   93 +
+ .../ai_workspace_m4_autogen.dir/cmake_clean.cmake  |   10 +
+ .../compiler_depend.make                           |    2 +
+ .../ai_workspace_m4_autogen.dir/compiler_depend.ts |    2 +
+ .../ai_workspace_m4_autogen.dir/progress.make      |    2 +
+ .../DependInfo.cmake                               |   22 +
+ .../build.make                                     |   87 +
+ .../cmake_clean.cmake                              |    8 +
+ .../compiler_depend.make                           |    2 +
+ .../compiler_depend.ts                             |    2 +
+ .../progress.make                                  |    1 +
+ build_f1/CMakeFiles/aiws_app.dir/DependInfo.cmake  |   31 +
+ .../aiws_app_autogen/mocs_compilation.cpp.o.d      |  370 +++
+ build_f1/CMakeFiles/aiws_app.dir/build.make        |  229 ++
+ build_f1/CMakeFiles/aiws_app.dir/cmake_clean.cmake |   30 +
+ .../aiws_app.dir/cmake_clean_target.cmake          |    3 +
+ .../aiws_app.dir/compiler_depend.internal          |  635 +++++
+ .../CMakeFiles/aiws_app.dir/compiler_depend.make   | 1894 +++++++++++++++
+ .../CMakeFiles/aiws_app.dir/compiler_depend.ts     |    2 +
+ build_f1/CMakeFiles/aiws_app.dir/depend.make       |    2 +
+ build_f1/CMakeFiles/aiws_app.dir/flags.make        |   10 +
+ build_f1/CMakeFiles/aiws_app.dir/link.txt          |    2 +
+ build_f1/CMakeFiles/aiws_app.dir/progress.make     |   11 +
+ .../aiws_app.dir/src/context_widget.cpp.o.d        |  395 ++++
+ .../CMakeFiles/aiws_app.dir/src/ipc_server.cpp.o.d |  200 ++
+ .../aiws_app.dir/src/main_window.cpp.o.d           |  414 ++++
+ .../aiws_app.dir/src/search_result_model.cpp.o.d   |  304 +++
+ .../aiws_app.dir/src/search_widget.cpp.o.d         |  416 ++++
+ .../aiws_app.dir/src/term_inspector_widget.cpp.o.d |  363 +++
+ .../aiws_app.dir/src/workspace_widget.cpp.o.d      |  407 ++++
+ .../aiws_app_autogen.dir/AutogenInfo.json          |  381 +++
+ .../aiws_app_autogen.dir/AutogenUsed.txt           |    1 +
+ .../aiws_app_autogen.dir/DependInfo.cmake          |   23 +
+ .../CMakeFiles/aiws_app_autogen.dir/ParseCache.txt | 2439 ++++++++++++++++++++
+ .../CMakeFiles/aiws_app_autogen.dir/build.make     |   93 +
+ .../aiws_app_autogen.dir/cmake_clean.cmake         |   10 +
+ .../aiws_app_autogen.dir/compiler_depend.make      |    2 +
+ .../aiws_app_autogen.dir/compiler_depend.ts        |    2 +
+ .../CMakeFiles/aiws_app_autogen.dir/progress.make  |    2 +
+ .../DependInfo.cmake                               |   22 +
+ .../aiws_app_autogen_timestamp_deps.dir/build.make |   88 +
+ .../cmake_clean.cmake                              |    8 +
+ .../compiler_depend.make                           |    2 +
+ .../compiler_depend.ts                             |    2 +
+ .../progress.make                                  |    1 +
+ build_f1/CMakeFiles/aiws_m2.dir/DependInfo.cmake   |   32 +
+ .../aiws_m2_autogen/mocs_compilation.cpp.o.d       |    3 +
+ build_f1/CMakeFiles/aiws_m2.dir/build.make         |  245 ++
+ build_f1/CMakeFiles/aiws_m2.dir/cmake_clean.cmake  |   32 +
+ .../aiws_m2.dir/cmake_clean_target.cmake           |    3 +
+ .../aiws_m2.dir/compiler_depend.internal           |  209 ++
+ .../CMakeFiles/aiws_m2.dir/compiler_depend.make    |  616 +++++
+ build_f1/CMakeFiles/aiws_m2.dir/compiler_depend.ts |    2 +
+ build_f1/CMakeFiles/aiws_m2.dir/depend.make        |    2 +
+ build_f1/CMakeFiles/aiws_m2.dir/flags.make         |   10 +
+ build_f1/CMakeFiles/aiws_m2.dir/link.txt           |    2 +
+ build_f1/CMakeFiles/aiws_m2.dir/progress.make      |   12 +
+ .../CMakeFiles/aiws_m2.dir/src/chunker.cpp.o.d     |  132 ++
+ .../aiws_m2.dir/src/context_builder.cpp.o.d        |  138 ++
+ .../aiws_m2.dir/src/corpus_index.cpp.o.d           |  133 ++
+ .../CMakeFiles/aiws_m2.dir/src/document.cpp.o.d    |  117 +
+ .../aiws_m2.dir/src/processing_core.cpp.o.d        |  175 ++
+ .../aiws_m2.dir/src/retrieval_engine.cpp.o.d       |  166 ++
+ .../aiws_m2.dir/src/text_processor.cpp.o.d         |  128 +
+ .../CMakeFiles/aiws_m2.dir/src/workspace.cpp.o.d   |  122 +
+ .../aiws_m2_autogen.dir/AutogenInfo.json           |  327 +++
+ .../CMakeFiles/aiws_m2_autogen.dir/AutogenUsed.txt |    1 +
+ .../aiws_m2_autogen.dir/DependInfo.cmake           |   23 +
+ .../CMakeFiles/aiws_m2_autogen.dir/ParseCache.txt  |    9 +
+ build_f1/CMakeFiles/aiws_m2_autogen.dir/build.make |   93 +
+ .../aiws_m2_autogen.dir/cmake_clean.cmake          |   10 +
+ .../aiws_m2_autogen.dir/compiler_depend.make       |    2 +
+ .../aiws_m2_autogen.dir/compiler_depend.ts         |    2 +
+ .../CMakeFiles/aiws_m2_autogen.dir/progress.make   |    2 +
+ .../DependInfo.cmake                               |   22 +
+ .../aiws_m2_autogen_timestamp_deps.dir/build.make  |   86 +
+ .../cmake_clean.cmake                              |    8 +
+ .../compiler_depend.make                           |    2 +
+ .../compiler_depend.ts                             |    2 +
+ .../progress.make                                  |    1 +
+ build_f1/CMakeFiles/aiws_send.dir/DependInfo.cmake |   25 +
+ .../aiws_send_autogen/mocs_compilation.cpp.o.d     |    3 +
+ build_f1/CMakeFiles/aiws_send.dir/build.make       |  137 ++
+ .../CMakeFiles/aiws_send.dir/cmake_clean.cmake     |   18 +
+ .../aiws_send.dir/compiler_depend.internal         |  202 ++
+ .../CMakeFiles/aiws_send.dir/compiler_depend.make  |  595 +++++
+ .../CMakeFiles/aiws_send.dir/compiler_depend.ts    |    2 +
+ build_f1/CMakeFiles/aiws_send.dir/depend.make      |    2 +
+ build_f1/CMakeFiles/aiws_send.dir/flags.make       |   10 +
+ build_f1/CMakeFiles/aiws_send.dir/link.txt         |    1 +
+ build_f1/CMakeFiles/aiws_send.dir/progress.make    |    5 +
+ .../aiws_send.dir/tools/aiws_send.cpp.o.d          |  211 ++
+ .../aiws_send_autogen.dir/AutogenInfo.json         |  330 +++
+ .../aiws_send_autogen.dir/AutogenUsed.txt          |    1 +
+ .../aiws_send_autogen.dir/DependInfo.cmake         |   23 +
+ .../aiws_send_autogen.dir/ParseCache.txt           |    2 +
+ .../CMakeFiles/aiws_send_autogen.dir/build.make    |   93 +
+ .../aiws_send_autogen.dir/cmake_clean.cmake        |   10 +
+ .../aiws_send_autogen.dir/compiler_depend.make     |    2 +
+ .../aiws_send_autogen.dir/compiler_depend.ts       |    2 +
+ .../CMakeFiles/aiws_send_autogen.dir/progress.make |    2 +
+ .../DependInfo.cmake                               |   22 +
+ .../build.make                                     |   87 +
+ .../cmake_clean.cmake                              |    8 +
+ .../compiler_depend.make                           |    2 +
+ .../compiler_depend.ts                             |    2 +
+ .../progress.make                                  |    1 +
+ build_f1/CMakeFiles/cmake.check_cache              |    1 +
+ build_f1/CMakeFiles/progress.marks                 |    1 +
+ .../CMakeFiles/student_tests.dir/DependInfo.cmake  |   25 +
+ build_f1/CMakeFiles/student_tests.dir/build.make   |  140 ++
+ .../CMakeFiles/student_tests.dir/cmake_clean.cmake |   18 +
+ .../student_tests.dir/compiler_depend.internal     |  754 ++++++
+ .../student_tests.dir/compiler_depend.make         | 2251 ++++++++++++++++++
+ .../student_tests.dir/compiler_depend.ts           |    2 +
+ build_f1/CMakeFiles/student_tests.dir/depend.make  |    2 +
+ build_f1/CMakeFiles/student_tests.dir/flags.make   |   10 +
+ build_f1/CMakeFiles/student_tests.dir/link.txt     |    1 +
+ .../CMakeFiles/student_tests.dir/progress.make     |    5 +
+ .../student_tests_autogen/mocs_compilation.cpp.o.d |    3 +
+ .../student_tests.dir/tests/student_tests.cpp.o.d  |  504 ++++
+ .../student_tests_autogen.dir/AutogenInfo.json     |  340 +++
+ .../student_tests_autogen.dir/AutogenUsed.txt      |    1 +
+ .../student_tests_autogen.dir/DependInfo.cmake     |   23 +
+ .../student_tests_autogen.dir/ParseCache.txt       |  557 +++++
+ .../student_tests_autogen.dir/build.make           |   93 +
+ .../student_tests_autogen.dir/cmake_clean.cmake    |   10 +
+ .../student_tests_autogen.dir/compiler_depend.make |    2 +
+ .../student_tests_autogen.dir/compiler_depend.ts   |    2 +
+ .../student_tests_autogen.dir/progress.make        |    2 +
+ .../DependInfo.cmake                               |   22 +
+ .../build.make                                     |   88 +
+ .../cmake_clean.cmake                              |    8 +
+ .../compiler_depend.make                           |    2 +
+ .../compiler_depend.ts                             |    2 +
+ .../progress.make                                  |    1 +
+ build_f1/CTestTestfile.cmake                       |    8 +
+ build_f1/Makefile                                  |  982 ++++++++
+ build_f1/Testing/Temporary/CTestCostData.txt       |    3 +
+ build_f1/Testing/Temporary/LastTest.log            |   34 +
+ build_f1/Testing/Temporary/LastTestsFailed.log     |    1 +
+ build_f1/ai_workspace_m4                           |  Bin 0 -> 689360 bytes
+ build_f1/ai_workspace_m4_autogen/deps              |  198 ++
+ build_f1/ai_workspace_m4_autogen/moc_predefs.h     |  466 ++++
+ .../ai_workspace_m4_autogen/mocs_compilation.cpp   |    3 +
+ build_f1/ai_workspace_m4_autogen/timestamp         |    0
+ .../YHJIA4DBD4/moc_context_widget.cpp              |  174 ++
+ .../YHJIA4DBD4/moc_context_widget.cpp.d            |  407 ++++
+ .../YHJIA4DBD4/moc_main_window.cpp                 |  260 +++
+ .../YHJIA4DBD4/moc_main_window.cpp.d               |  417 ++++
+ .../YHJIA4DBD4/moc_search_result_model.cpp         |   99 +
+ .../YHJIA4DBD4/moc_search_result_model.cpp.d       |  373 +++
+ .../YHJIA4DBD4/moc_search_widget.cpp               |  257 +++
+ .../YHJIA4DBD4/moc_search_widget.cpp.d             |  407 ++++
+ .../YHJIA4DBD4/moc_term_inspector_widget.cpp       |  166 ++
+ .../YHJIA4DBD4/moc_term_inspector_widget.cpp.d     |  407 ++++
+ .../YHJIA4DBD4/moc_workspace_widget.cpp            |  192 ++
+ .../YHJIA4DBD4/moc_workspace_widget.cpp.d          |  406 ++++
+ build_f1/aiws_app_autogen/deps                     |  631 +++++
+ build_f1/aiws_app_autogen/moc_predefs.h            |  466 ++++
+ build_f1/aiws_app_autogen/mocs_compilation.cpp     |    7 +
+ build_f1/aiws_app_autogen/timestamp                |    0
+ build_f1/aiws_m2_autogen/deps                      |  205 ++
+ build_f1/aiws_m2_autogen/moc_predefs.h             |  462 ++++
+ build_f1/aiws_m2_autogen/mocs_compilation.cpp      |    3 +
+ build_f1/aiws_m2_autogen/timestamp                 |    0
+ build_f1/aiws_send                                 |  Bin 0 -> 39416 bytes
+ build_f1/aiws_send_autogen/deps                    |  198 ++
+ build_f1/aiws_send_autogen/moc_predefs.h           |  466 ++++
+ build_f1/aiws_send_autogen/mocs_compilation.cpp    |    3 +
+ build_f1/aiws_send_autogen/timestamp               |    0
+ build_f1/cmake_install.cmake                       |   54 +
+ build_f1/libaiws_app.a                             |  Bin 0 -> 822322 bytes
+ build_f1/libaiws_m2.a                              |  Bin 0 -> 1497462 bytes
+ build_f1/student_tests                             |  Bin 0 -> 805456 bytes
+ build_f1/student_tests_autogen/deps                |  750 ++++++
+ .../include/student_tests.moc                      |  184 ++
+ .../include/student_tests.moc.d                    |  553 +++++
+ build_f1/student_tests_autogen/moc_predefs.h       |  469 ++++
+ .../student_tests_autogen/mocs_compilation.cpp     |    3 +
+ build_f1/student_tests_autogen/timestamp           |    0
+ build_f2/.qt/QtDeploySupport.cmake                 |   45 +
+ build_f2/CMakeCache.txt                            | 1304 +++++++++++
+ build_f2/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake  |   85 +
+ .../3.28.3/CMakeDetermineCompilerABI_CXX.bin       |  Bin 0 -> 15992 bytes
+ build_f2/CMakeFiles/3.28.3/CMakeSystem.cmake       |   15 +
+ .../3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp    |  869 +++++++
+ build_f2/CMakeFiles/3.28.3/CompilerIdCXX/a.out     |  Bin 0 -> 16096 bytes
+ build_f2/CMakeFiles/CMakeConfigureLog.yaml         |  353 +++
+ .../CMakeFiles/CMakeDirectoryInformation.cmake     |   16 +
+ build_f2/CMakeFiles/CMakeRuleHashes.txt            |   16 +
+ build_f2/CMakeFiles/Makefile.cmake                 |  244 ++
+ build_f2/CMakeFiles/Makefile2                      |  504 ++++
+ build_f2/CMakeFiles/TargetDirectories.txt          |   18 +
+ .../ai_workspace_m4.dir/DependInfo.cmake           |   25 +
+ .../mocs_compilation.cpp.o.d                       |    3 +
+ build_f2/CMakeFiles/ai_workspace_m4.dir/build.make |  139 ++
+ .../ai_workspace_m4.dir/cmake_clean.cmake          |   18 +
+ .../ai_workspace_m4.dir/compiler_depend.internal   |  202 ++
+ .../ai_workspace_m4.dir/compiler_depend.make       |  595 +++++
+ .../ai_workspace_m4.dir/compiler_depend.ts         |    2 +
+ .../CMakeFiles/ai_workspace_m4.dir/depend.make     |    2 +
+ build_f2/CMakeFiles/ai_workspace_m4.dir/flags.make |   10 +
+ build_f2/CMakeFiles/ai_workspace_m4.dir/link.txt   |    1 +
+ .../CMakeFiles/ai_workspace_m4.dir/progress.make   |    5 +
+ .../ai_workspace_m4.dir/src/main.cpp.o.d           |  384 +++
+ .../ai_workspace_m4_autogen.dir/AutogenInfo.json   |  329 +++
+ .../ai_workspace_m4_autogen.dir/AutogenUsed.txt    |    1 +
+ .../ai_workspace_m4_autogen.dir/DependInfo.cmake   |   23 +
+ .../ai_workspace_m4_autogen.dir/ParseCache.txt     |    2 +
+ .../ai_workspace_m4_autogen.dir/build.make         |   93 +
+ .../ai_workspace_m4_autogen.dir/cmake_clean.cmake  |   10 +
+ .../compiler_depend.make                           |    2 +
+ .../ai_workspace_m4_autogen.dir/compiler_depend.ts |    2 +
+ .../ai_workspace_m4_autogen.dir/progress.make      |    2 +
+ .../DependInfo.cmake                               |   22 +
+ .../build.make                                     |   87 +
+ .../cmake_clean.cmake                              |    8 +
+ .../compiler_depend.make                           |    2 +
+ .../compiler_depend.ts                             |    2 +
+ .../progress.make                                  |    1 +
+ build_f2/CMakeFiles/aiws_app.dir/DependInfo.cmake  |   31 +
+ .../aiws_app_autogen/mocs_compilation.cpp.o.d      |  370 +++
+ build_f2/CMakeFiles/aiws_app.dir/build.make        |  229 ++
+ build_f2/CMakeFiles/aiws_app.dir/cmake_clean.cmake |   30 +
+ .../aiws_app.dir/cmake_clean_target.cmake          |    3 +
+ .../aiws_app.dir/compiler_depend.internal          |  635 +++++
+ .../CMakeFiles/aiws_app.dir/compiler_depend.make   | 1894 +++++++++++++++
+ .../CMakeFiles/aiws_app.dir/compiler_depend.ts     |    2 +
+ build_f2/CMakeFiles/aiws_app.dir/depend.make       |    2 +
+ build_f2/CMakeFiles/aiws_app.dir/flags.make        |   10 +
+ build_f2/CMakeFiles/aiws_app.dir/link.txt          |    2 +
+ build_f2/CMakeFiles/aiws_app.dir/progress.make     |   11 +
+ .../aiws_app.dir/src/context_widget.cpp.o.d        |  395 ++++
+ .../CMakeFiles/aiws_app.dir/src/ipc_server.cpp.o.d |  200 ++
+ .../aiws_app.dir/src/main_window.cpp.o.d           |  414 ++++
+ .../aiws_app.dir/src/search_result_model.cpp.o.d   |  304 +++
+ .../aiws_app.dir/src/search_widget.cpp.o.d         |  416 ++++
+ .../aiws_app.dir/src/term_inspector_widget.cpp.o.d |  363 +++
+ .../aiws_app.dir/src/workspace_widget.cpp.o.d      |  407 ++++
+ .../aiws_app_autogen.dir/AutogenInfo.json          |  381 +++
+ .../aiws_app_autogen.dir/AutogenUsed.txt           |    1 +
+ .../aiws_app_autogen.dir/DependInfo.cmake          |   23 +
+ .../CMakeFiles/aiws_app_autogen.dir/ParseCache.txt | 2439 ++++++++++++++++++++
+ .../CMakeFiles/aiws_app_autogen.dir/build.make     |   93 +
+ .../aiws_app_autogen.dir/cmake_clean.cmake         |   10 +
+ .../aiws_app_autogen.dir/compiler_depend.make      |    2 +
+ .../aiws_app_autogen.dir/compiler_depend.ts        |    2 +
+ .../CMakeFiles/aiws_app_autogen.dir/progress.make  |    2 +
+ .../DependInfo.cmake                               |   22 +
+ .../aiws_app_autogen_timestamp_deps.dir/build.make |   88 +
+ .../cmake_clean.cmake                              |    8 +
+ .../compiler_depend.make                           |    2 +
+ .../compiler_depend.ts                             |    2 +
+ .../progress.make                                  |    1 +
+ build_f2/CMakeFiles/aiws_m2.dir/DependInfo.cmake   |   32 +
+ .../aiws_m2_autogen/mocs_compilation.cpp.o.d       |    3 +
+ build_f2/CMakeFiles/aiws_m2.dir/build.make         |  245 ++
+ build_f2/CMakeFiles/aiws_m2.dir/cmake_clean.cmake  |   32 +
+ .../aiws_m2.dir/cmake_clean_target.cmake           |    3 +
+ .../aiws_m2.dir/compiler_depend.internal           |  209 ++
+ .../CMakeFiles/aiws_m2.dir/compiler_depend.make    |  616 +++++
+ build_f2/CMakeFiles/aiws_m2.dir/compiler_depend.ts |    2 +
+ build_f2/CMakeFiles/aiws_m2.dir/depend.make        |    2 +
+ build_f2/CMakeFiles/aiws_m2.dir/flags.make         |   10 +
+ build_f2/CMakeFiles/aiws_m2.dir/link.txt           |    2 +
+ build_f2/CMakeFiles/aiws_m2.dir/progress.make      |   12 +
+ .../CMakeFiles/aiws_m2.dir/src/chunker.cpp.o.d     |  132 ++
+ .../aiws_m2.dir/src/context_builder.cpp.o.d        |  138 ++
+ .../aiws_m2.dir/src/corpus_index.cpp.o.d           |  133 ++
+ .../CMakeFiles/aiws_m2.dir/src/document.cpp.o.d    |  117 +
+ .../aiws_m2.dir/src/processing_core.cpp.o.d        |  175 ++
+ .../aiws_m2.dir/src/retrieval_engine.cpp.o.d       |  166 ++
+ .../aiws_m2.dir/src/text_processor.cpp.o.d         |  128 +
+ .../CMakeFiles/aiws_m2.dir/src/workspace.cpp.o.d   |  122 +
+ .../aiws_m2_autogen.dir/AutogenInfo.json           |  327 +++
+ .../CMakeFiles/aiws_m2_autogen.dir/AutogenUsed.txt |    1 +
+ .../aiws_m2_autogen.dir/DependInfo.cmake           |   23 +
+ .../CMakeFiles/aiws_m2_autogen.dir/ParseCache.txt  |    9 +
+ build_f2/CMakeFiles/aiws_m2_autogen.dir/build.make |   93 +
+ .../aiws_m2_autogen.dir/cmake_clean.cmake          |   10 +
+ .../aiws_m2_autogen.dir/compiler_depend.make       |    2 +
+ .../aiws_m2_autogen.dir/compiler_depend.ts         |    2 +
+ .../CMakeFiles/aiws_m2_autogen.dir/progress.make   |    2 +
+ .../DependInfo.cmake                               |   22 +
+ .../aiws_m2_autogen_timestamp_deps.dir/build.make  |   86 +
+ .../cmake_clean.cmake                              |    8 +
+ .../compiler_depend.make                           |    2 +
+ .../compiler_depend.ts                             |    2 +
+ .../progress.make                                  |    1 +
+ build_f2/CMakeFiles/aiws_send.dir/DependInfo.cmake |   25 +
+ .../aiws_send_autogen/mocs_compilation.cpp.o.d     |    3 +
+ build_f2/CMakeFiles/aiws_send.dir/build.make       |  137 ++
+ .../CMakeFiles/aiws_send.dir/cmake_clean.cmake     |   18 +
+ .../aiws_send.dir/compiler_depend.internal         |  202 ++
+ .../CMakeFiles/aiws_send.dir/compiler_depend.make  |  595 +++++
+ .../CMakeFiles/aiws_send.dir/compiler_depend.ts    |    2 +
+ build_f2/CMakeFiles/aiws_send.dir/depend.make      |    2 +
+ build_f2/CMakeFiles/aiws_send.dir/flags.make       |   10 +
+ build_f2/CMakeFiles/aiws_send.dir/link.txt         |    1 +
+ build_f2/CMakeFiles/aiws_send.dir/progress.make    |    5 +
+ .../aiws_send.dir/tools/aiws_send.cpp.o.d          |  211 ++
+ .../aiws_send_autogen.dir/AutogenInfo.json         |  330 +++
+ .../aiws_send_autogen.dir/AutogenUsed.txt          |    1 +
+ .../aiws_send_autogen.dir/DependInfo.cmake         |   23 +
+ .../aiws_send_autogen.dir/ParseCache.txt           |    2 +
+ .../CMakeFiles/aiws_send_autogen.dir/build.make    |   93 +
+ .../aiws_send_autogen.dir/cmake_clean.cmake        |   10 +
+ .../aiws_send_autogen.dir/compiler_depend.make     |    2 +
+ .../aiws_send_autogen.dir/compiler_depend.ts       |    2 +
+ .../CMakeFiles/aiws_send_autogen.dir/progress.make |    2 +
+ .../DependInfo.cmake                               |   22 +
+ .../build.make                                     |   87 +
+ .../cmake_clean.cmake                              |    8 +
+ .../compiler_depend.make                           |    2 +
+ .../compiler_depend.ts                             |    2 +
+ .../progress.make                                  |    1 +
+ build_f2/CMakeFiles/cmake.check_cache              |    1 +
+ build_f2/CMakeFiles/progress.marks                 |    1 +
+ .../CMakeFiles/student_tests.dir/DependInfo.cmake  |   25 +
+ build_f2/CMakeFiles/student_tests.dir/build.make   |  140 ++
+ .../CMakeFiles/student_tests.dir/cmake_clean.cmake |   18 +
+ .../student_tests.dir/compiler_depend.internal     |  754 ++++++
+ .../student_tests.dir/compiler_depend.make         | 2251 ++++++++++++++++++
+ .../student_tests.dir/compiler_depend.ts           |    2 +
+ build_f2/CMakeFiles/student_tests.dir/depend.make  |    2 +
+ build_f2/CMakeFiles/student_tests.dir/flags.make   |   10 +
+ build_f2/CMakeFiles/student_tests.dir/link.txt     |    1 +
+ .../CMakeFiles/student_tests.dir/progress.make     |    5 +
+ .../student_tests_autogen/mocs_compilation.cpp.o.d |    3 +
+ .../student_tests.dir/tests/student_tests.cpp.o.d  |  504 ++++
+ .../student_tests_autogen.dir/AutogenInfo.json     |  340 +++
+ .../student_tests_autogen.dir/AutogenUsed.txt      |    1 +
+ .../student_tests_autogen.dir/DependInfo.cmake     |   23 +
+ .../student_tests_autogen.dir/ParseCache.txt       |  557 +++++
+ .../student_tests_autogen.dir/build.make           |   93 +
+ .../student_tests_autogen.dir/cmake_clean.cmake    |   10 +
+ .../student_tests_autogen.dir/compiler_depend.make |    2 +
+ .../student_tests_autogen.dir/compiler_depend.ts   |    2 +
+ .../student_tests_autogen.dir/progress.make        |    2 +
+ .../DependInfo.cmake                               |   22 +
+ .../build.make                                     |   88 +
+ .../cmake_clean.cmake                              |    8 +
+ .../compiler_depend.make                           |    2 +
+ .../compiler_depend.ts                             |    2 +
+ .../progress.make                                  |    1 +
+ build_f2/CTestTestfile.cmake                       |    8 +
+ build_f2/Makefile                                  |  982 ++++++++
+ build_f2/Testing/Temporary/CTestCostData.txt       |    3 +
+ build_f2/Testing/Temporary/LastTest.log            |   33 +
+ build_f2/Testing/Temporary/LastTestsFailed.log     |    1 +
+ build_f2/ai_workspace_m4                           |  Bin 0 -> 689360 bytes
+ build_f2/ai_workspace_m4_autogen/deps              |  198 ++
+ build_f2/ai_workspace_m4_autogen/moc_predefs.h     |  466 ++++
+ .../ai_workspace_m4_autogen/mocs_compilation.cpp   |    3 +
+ build_f2/ai_workspace_m4_autogen/timestamp         |    0
+ .../YHJIA4DBD4/moc_context_widget.cpp              |  174 ++
+ .../YHJIA4DBD4/moc_context_widget.cpp.d            |  407 ++++
+ .../YHJIA4DBD4/moc_main_window.cpp                 |  260 +++
+ .../YHJIA4DBD4/moc_main_window.cpp.d               |  417 ++++
+ .../YHJIA4DBD4/moc_search_result_model.cpp         |   99 +
+ .../YHJIA4DBD4/moc_search_result_model.cpp.d       |  373 +++
+ .../YHJIA4DBD4/moc_search_widget.cpp               |  257 +++
+ .../YHJIA4DBD4/moc_search_widget.cpp.d             |  407 ++++
+ .../YHJIA4DBD4/moc_term_inspector_widget.cpp       |  166 ++
+ .../YHJIA4DBD4/moc_term_inspector_widget.cpp.d     |  407 ++++
+ .../YHJIA4DBD4/moc_workspace_widget.cpp            |  192 ++
+ .../YHJIA4DBD4/moc_workspace_widget.cpp.d          |  406 ++++
+ build_f2/aiws_app_autogen/deps                     |  631 +++++
+ build_f2/aiws_app_autogen/moc_predefs.h            |  466 ++++
+ build_f2/aiws_app_autogen/mocs_compilation.cpp     |    7 +
+ build_f2/aiws_app_autogen/timestamp                |    0
+ build_f2/aiws_m2_autogen/deps                      |  205 ++
+ build_f2/aiws_m2_autogen/moc_predefs.h             |  462 ++++
+ build_f2/aiws_m2_autogen/mocs_compilation.cpp      |    3 +
+ build_f2/aiws_m2_autogen/timestamp                 |    0
+ build_f2/aiws_send                                 |  Bin 0 -> 39416 bytes
+ build_f2/aiws_send_autogen/deps                    |  198 ++
+ build_f2/aiws_send_autogen/moc_predefs.h           |  466 ++++
+ build_f2/aiws_send_autogen/mocs_compilation.cpp    |    3 +
+ build_f2/aiws_send_autogen/timestamp               |    0
+ build_f2/cmake_install.cmake                       |   54 +
+ build_f2/libaiws_app.a                             |  Bin 0 -> 822162 bytes
+ build_f2/libaiws_m2.a                              |  Bin 0 -> 1497462 bytes
+ build_f2/student_tests                             |  Bin 0 -> 805456 bytes
+ build_f2/student_tests_autogen/deps                |  750 ++++++
+ .../include/student_tests.moc                      |  184 ++
+ .../include/student_tests.moc.d                    |  553 +++++
+ build_f2/student_tests_autogen/moc_predefs.h       |  469 ++++
+ .../student_tests_autogen/mocs_compilation.cpp     |    3 +
+ build_f2/student_tests_autogen/timestamp           |    0
+ include/aiws/gui/main_window.hpp                   |    1 +
+ src/ipc_server.cpp                                 |   80 +-
+ src/main_window.cpp                                |   51 +-
+ tests/student_tests.cpp                            |  245 +-
+ 424 files changed, 67228 insertions(+), 120 deletions(-)
+
+commit a2bc3aee4854e73e159da0d73d381f5c0f788b25
+Author: Joel Phillips <joelnp5379@vt.edu>
+Date:   2026-11-08 23:04:17 -0500
+
+    FInished M4
+
+ CMakeLists.txt                   |   7 ++
+ DESIGN.md                        |  31 +++++-
+ include/aiws/gui/main_window.hpp |   2 +
+ include/aiws/ipc_server.hpp      |  31 ++++++
+ src/ipc_server.cpp               | 216 +++++++++++++++++++++++++++++++++++++++
+ src/main.cpp                     |  74 ++++++++++++--
+ src/main_window.cpp              |   5 +
+ tests/student_tests.cpp          | 149 ++++++++++++++++++++++++++-
+ tools/aiws_send.cpp              | 138 +++++++++++++++++++++++++
+ 9 files changed, 639 insertions(+), 14 deletions(-)
+
+commit 9f0b3ac90e5ef55b1fbc0b3c028d2cc30388f063
+Author: Joel Phillips <joelnp5379@vt.edu>
+Date:   2026-11-08 15:02:49 -0500
+
+    Initial commit
+
+ .gitignore                                 |   3 +
+ CMakeLists.txt                             |  57 ++++++
+ DESIGN.md                                  |   3 +
+ DESIGN_NOTE.md                             |  34 ++++
+ STARTER_README.pdf                         | Bin 0 -> 39600 bytes
+ data/public/doc_ai.txt                     |   3 +
+ data/public/doc_retrieval.txt              |   3 +
+ data/public/doc_systems.txt                |   3 +
+ data/public/queries.txt                    |   4 +
+ include/aiws/chunker.hpp                   |  25 +++
+ include/aiws/chunking_strategy.hpp         |  18 ++
+ include/aiws/context_builder.hpp           |  13 ++
+ include/aiws/context_strategy.hpp          |  17 ++
+ include/aiws/corpus_index.hpp              |  36 ++++
+ include/aiws/document.hpp                  |  22 +++
+ include/aiws/gui/context_widget.hpp        |  75 ++++++++
+ include/aiws/gui/main_window.hpp           | 158 ++++++++++++++++
+ include/aiws/gui/resettable.hpp            |  22 +++
+ include/aiws/gui/search_result_model.hpp   |  84 +++++++++
+ include/aiws/gui/search_widget.hpp         | 105 +++++++++++
+ include/aiws/gui/term_inspector_widget.hpp |  81 ++++++++
+ include/aiws/gui/workspace_widget.hpp      | 101 ++++++++++
+ include/aiws/processing_core.hpp           |  53 ++++++
+ include/aiws/processing_types.hpp          |  38 ++++
+ include/aiws/retrieval_engine.hpp          |  18 ++
+ include/aiws/retrieval_strategy.hpp        |  20 ++
+ include/aiws/text_processor.hpp            |  29 +++
+ include/aiws/workspace.hpp                 |  19 ++
+ src/chunker.cpp                            |  59 ++++++
+ src/context_builder.cpp                    |  29 +++
+ src/context_widget.cpp                     |  96 ++++++++++
+ src/corpus_index.cpp                       |  72 +++++++
+ src/document.cpp                           |  14 ++
+ src/main.cpp                               |  29 +++
+ src/main_window.cpp                        | 291 +++++++++++++++++++++++++++++
+ src/processing_core.cpp                    | 104 +++++++++++
+ src/retrieval_engine.cpp                   |  86 +++++++++
+ src/search_result_model.cpp                |  73 ++++++++
+ src/search_widget.cpp                      | 149 +++++++++++++++
+ src/term_inspector_widget.cpp              |  90 +++++++++
+ src/text_processor.cpp                     | 116 ++++++++++++
+ src/workspace.cpp                          |  17 ++
+ src/workspace_widget.cpp                   |  92 +++++++++
+ tests/student_tests.cpp                    |   2 +
+ 44 files changed, 2363 insertions(+)
